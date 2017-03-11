@@ -1,0 +1,35 @@
+/* Slider */
+.slick-slider {position: relative; display: block; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -khtml-user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
+.slick-list {position: relative; display: block; overflow: hidden; margin: 0; padding: 0; }
+.slick-list:focus {outline: none; }
+.slick-list.dragging {cursor: pointer; cursor: hand; }
+.slick-slider .slick-track,
+.slick-slider .slick-list {-webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.slick-track {position: relative; top: 0; left: 0; display: block; }
+.slick-track:before,
+.slick-track:after {display: table; content: ''; }
+.slick-track:after {clear: both; }
+.slick-loading .slick-track {visibility: hidden; }
+.slick-slide {display: none; float: left; height: 100%; min-height: 1px; }
+[dir='rtl'] .slick-slide {float: right; }
+.slick-slide img {display: block; }
+.slick-slide.slick-loading img {display: none; }
+.slick-slide.dragging img {pointer-events: none; }
+.slick-initialized .slick-slide {display: block; }
+.slick-loading .slick-slide {visibility: hidden; }
+.slick-vertical .slick-slide {display: block; height: auto; border: 1px solid transparent; }
+.slick-arrow.slick-hidden {display: none; }
+/*
+ Theme Name:   MARSALA
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Storefront Custom Child Theme for MARSALA 
+ Author:       Tony
+ Author URI:   http://example.com
+ Template:     storefront
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  storefront-child
+*/
+body{background:#800080}.right-sidebar .content-area{width:100%}
