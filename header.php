@@ -25,6 +25,8 @@
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 		<div class="container">
+			
+			<?php storefront_handheld_footer_bar_cart_link(); ?>
 
 			<?php
 			/**

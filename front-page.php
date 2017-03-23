@@ -23,15 +23,14 @@ get_header(); ?>
 		
 			<div class="container">
 				<div class="row">
-					<?php if ( have_posts() ) :
-
-						get_template_part( 'loop' );
-
-					else :
-
-						get_template_part( 'content', 'none' );
-
-					endif; ?>
+					<div class="banner-promo-home">
+						<h2 class="text-center">MARSALA SALE</h2>
+						<h3 class="text-center gris">¡HASTA EL 50% DE DESCUENTO!</h3>
+					</div>
+					<div class="banner-hashtag">
+						<span class="hash">#MMARSALA</span>
+						<span>EN TODO EL MUNDO</span>
+					</div>
 				</div>
 			</div>
 
