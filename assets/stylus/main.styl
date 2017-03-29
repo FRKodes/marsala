@@ -1,25 +1,127 @@
+gris0 = #b1b1b1
+gris1 = #b2b2b2
+gris2 = #5f5f5f
+gris3 = #d5d5d5
+
+.galery-photos-container
+	overflow hidden
+.grid-item
+	float left
+	img
+		width 100%
+		height auto
+
+.grid-item--width2
+	width: 200px
+.grid-item--width3
+	width: 100%
+
+.grid-item--height2
+	height 200px
+.grid-item--height3
+	height 200px
+
+.grid-item-50
+	width 50%
+.grid-item-100
+	width 100%
+	
 body
 	background white
-.home.page:not(.page-template-template-homepage) .site-header
-	margin-bottom 0px !important
-	background rgba(white, .5)
-	width 100%
-	padding 0
-	height 50px
-	position fixed
+	font-family 'Montserrat' !important
+.navbar-default
+	border none
+	background none
+	.navbar-toggle
+		.icon-bar
+			background-color gris1
+h1.woocommerce-breadcrumb
+	background-color transparent !important
+	text-align center
+	margin-top 0
+	margin-bottom 0
+	font-size 2em
+	text-transform uppercase
+.the-content
+	padding-top 20px
+	padding-bottom 20px
+.home.page:not(.page-template-template-homepage)
+	.site-header
+		background rgba(white, .2)
+		height 50px
+		margin-bottom 0px !important
+		padding 0
+		position fixed
+		width 100%
+		.footer-cart-contents
+			background black
+			border-radius 50%
+			display inline-block
+			height 30px
+			padding 0
+			text-align center
+			width 30px
+		.skip-link.screen-reader-text
+			display none
+		.storefront-primary-navigation
+			order 1
+			width 120px
+		.navbar-header
+			align-items center
+			display flex
+			height 100%
+			justify-content space-between
+			margin 0 auto
+			width 100%
+			&::before
+			&::after
+				content ""
+				display none
+			.navbar-toggle
+				margin-right 0
+				border none
+				float none
+				border-radius 0px
+				box-shadow none
+				&:hover
+					background-color rgba(gris0, .2)
+	.site-branding
+		order 2
+	.main-navigation
+		&.toggled
+			margin-top 380px
+	.navbar-brand
+		float none
+		height 40px
+		padding 0
+		img
+			display inline-block
+			height 40px
+			width auto
+	.navbar-collapse
+		background none
+		margin-left -10%
+		padding-bottom 20px
+		padding-top 20px
+		position absolute
+		top 50px
+		width 110%
+		border none
 .main-banners-container
 	background gray
-	width 100%
-	height 300px
 	display block
+	height 300px
+	width 100%
 	.item
-		background red url(./assets/images/01-Slide-A.jpg) no-repeat center center
+		background transparent url(./assets/images/01-Slide-A.jpg) no-repeat center center
 		background-size cover
-		width 100%
 		height 100%
+		width 100%
 .banner-promo-home
 	background transparent url(./assets/images/02-Diagonales.svg) no-repeat left bottom
 	padding 40px 0
+	h2
+		color black
 	h3
 		border none
 		background-size cover
@@ -40,3 +142,229 @@ body
 		font-size 2em
 .right-sidebar .content-area
 	width 100%
+/*Nosotros*/
+.site-header
+	background none !important
+	.container>.navbar-header
+		display flex
+	    justify-content space-between
+	    border 1px solid red
+	    align-items center
+	    span.hidden-sm.hidden-md.hidden-lg
+			height 50px
+.navbar-default
+	.navbar-brand
+		width 50px
+		img
+			width 100%
+			height auto
+.navbar-toggle
+	margin-right 0
+.footer-cart-contents
+	background black
+	width 30px
+	height 30px
+	border-radius 50%
+	display inline-block
+	text-align center
+.nosotros-banner-container
+	height 240px
+	width 100%
+	background transparent url(./assets/images/banner-nosotros-marsala.jpg) no-repeat center top
+	background-size cover
+.nosotros-images-container
+	display flex
+	.image-container
+		width 49%
+		display inline-block
+		img
+			height auto
+.gallery-banner
+	background transparent url(./assets/images/banner-gallery-marsala.jpg) no-repeat center center
+	background-size cover
+	height 200px
+	text-align center
+	display flex
+	justify-content center
+	align-items center
+	h2
+		color white
+		font-size 1.6em
+footer
+	&.site-footer
+		background none
+		.container
+			border-top 1px solid gris3
+			padding-top 30px
+	.first-block
+		display flex
+		.title-line
+			clear both
+		.footer_about_us_menu
+		.footer_products_menu
+			flex-grow 1
+			ul
+				margin-left 0
+				li
+					display block
+					a
+						color gris0
+	.social
+		margin-left 0
+		text-align center
+		li
+			display inline-block
+			margin 10px
+			a
+			a:not(.button)
+				color gris0
+	.footer-logo
+		text-align center
+		img
+			width 50px
+			display inline-block
+@media screen and (min-width: 768px)
+	.home.page:not(.page-template-template-homepage)
+		.site-header
+			height 100px
+			.navbar-brand
+				width 100%
+				height 100%
+				margin 0
+				img
+					width 100%
+					height auto
+					margin-top 14px
+			.navbar-header
+				width 200px
+				margin 0
+			.navbar-collapse
+				border 1px solid red
+				margin 0
+				padding 0
+				position relative
+				top 0
+				display flex
+				width auto
+				flex-direction row
+				justify-content space-between
+				li
+					display inline-block
+	.navbar-default
+		.container
+			display flex
+			flex-direction row
+			height 100px
+			justify-content space-between
+			align-items center
+			padding-right 0
+			padding-left 0
+			&::before
+			&::after
+				display none
+			.navbar-header
+				display inline-block
+	.primary-navigation
+		display inline-flex !important
+		.menu
+			padding 0
+			margin 0
+			li
+				margin 0 5px
+				text-transform uppercase
+				a
+					color gris2
+	.home.page:not(.page-template-template-homepage)
+		.site-header
+			.footer-cart-contents
+				margin-left 50px
+	.main-banners-container
+		height auto
+		margin-bottom 30px
+		.item
+			height 500px
+	.banner-promo-home
+		height 130px
+		position relative
+		background-size 260px
+		h2
+			position absolute
+			left 40px
+			top 0
+			font-size 3em
+		h3
+			position absolute
+			right 40px
+			top 0
+			font-size 3em
+			&.second-line
+				width 300px
+				height auto
+				padding-top 0
+	.banner-hashtag
+		height 250px
+		line-height 3.8em
+		padding-left 50px
+		padding-right 50px
+		.hash
+			font-size 5em
+		.world
+			font-size 2.3em
+	.nosotros-banner-container
+		height 430px
+		margin-bottom 40px
+	.nosotros-images-container
+		margin-top 30px
+		justify-content space-between
+		.image-container
+			width 48%
+	.gallery-banner
+		height 300px
+		h2
+			font-size 2em
+	footer
+		&.site-footer
+			.container
+				display flex
+				.first-block
+					width 66%
+				.second-block
+					width 34%
+		.footer-logo
+			img
+				width 25px
+@media screen and (min-width: 992px)
+	.main-banners-container
+		margin-bottom 50px
+		.item
+			height 650px
+	.banner-promo-home
+		height 160px
+		background-size 320px
+		h2
+			font-size 4.6em
+			top -8px
+		h3
+			right 0px
+			font-size 4em
+			&.second-line
+				width 450px
+				height auto
+				padding-top 0
+	.banner-hashtag
+		height 340px
+		line-height 4em
+		padding-left 80px
+		padding-right 80px
+		.hash
+			font-size 6em
+		.world
+			font-size 3em
+	.nosotros-banner-container
+		height 670px
+	.nosotros-images-container
+		margin-top 40px
+	.gallery-banner
+		height 400px
+		h2
+			font-size 3em

@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package storefront
+ * @package storefront-child
  */
 
 ?><!DOCTYPE html>
@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
 
@@ -24,27 +24,28 @@
 	do_action( 'storefront_before_header' ); ?>
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
-		<div class="container">
-			
-			<?php storefront_handheld_footer_bar_cart_link(); ?>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand header-logo" href="#">
+			  	<img class="hidden-sm hidden-md hidden-lg" src="<?php echo get_stylesheet_directory_uri()."/assets/images/mmarsala-black.svg"; ?>" alt="mini logo header mmarsala">
+			  	<img class="hidden-xs" src="<?php echo get_stylesheet_directory_uri()."/assets/images/logo-marsala-normal.svg"; ?>" alt="logo mmarsala">
+			  </a>
+			  <span class="hidden-sm hidden-md hidden-lg"><?php storefront_handheld_footer_bar_cart_link(); ?></span>
+			</div>
 
-			<?php
-			/**
-			 * Functions hooked into storefront_header action
-			 *
-			 * @hooked storefront_skip_links                       - 0
-			 * @hooked storefront_social_icons                     - 10
-			 * @hooked storefront_site_branding                    - 20
-			 * @hooked storefront_secondary_navigation             - 30
-			 * @hooked storefront_product_search                   - 40
-			 * @hooked storefront_primary_navigation_wrapper       - 42
-			 * @hooked storefront_primary_navigation               - 50
-			 * @hooked storefront_header_cart                      - 60
-			 * @hooked storefront_primary_navigation_wrapper_close - 68
-			 */
-			do_action( 'storefront_header' ); ?>
-
-		</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<?php wp_nav_menu(array('theme_location' => 'primary', 'container_class' => 'primary-navigation' ) ); ?>
+				<span class="hidden-xs"><?php storefront_handheld_footer_bar_cart_link(); ?></span>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</nav>
 	</header><!-- #masthead -->
 
 	<?php

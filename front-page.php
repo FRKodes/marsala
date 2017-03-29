@@ -25,11 +25,11 @@ get_header(); ?>
 				<div class="row">
 					<div class="banner-promo-home">
 						<h2 class="text-center">MARSALA SALE</h2>
-						<h3 class="text-center gris">¡HASTA EL 50% DE DESCUENTO!</h3>
+						<h3 class="text-center gris second-line">¡HASTA EL 50% DE DESCUENTO!</h3>
 					</div>
 					<div class="banner-hashtag">
 						<span class="hash">#MMARSALA</span>
-						<span>EN TODO EL MUNDO</span>
+						<span class="world">EN TODO EL MUNDO</span>
 					</div>
 				</div>
 			</div>

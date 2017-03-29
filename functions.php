@@ -14,6 +14,40 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 register_nav_menus( array(
 	'footer_menu_acerca_de' => 'Footer Acerca De MARSALA',
-	'footer_menu' => 'Footer Productos'
+	'footer_menu_productos' => 'Footer Productos'
 ) );
+
+if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
+
+	/**
+	 * Output the WooCommerce Breadcrumb.
+	 *
+	 * @param array $args
+	 */
+	function woocommerce_breadcrumb( $args = array() ) {
+		$args = wp_parse_args( $args, apply_filters( 'woocommerce_breadcrumb_defaults', array(
+			'delimiter'   => '',
+			'wrap_before' => '<h1 class="woocommerce-breadcrumb" ' . ( is_single() ? 'itemprop="breadcrumb"' : '' ) . '>',
+			'wrap_after'  => '</h1>',
+			'before'      => '',
+			'after'       => '',
+			'home'        => _x( '', 'breadcrumb', 'woocommerce' )
+		) ) );
+
+		$breadcrumbs = new WC_Breadcrumb();
+
+		if ( ! empty( $args['home'] ) ) {
+			$breadcrumbs->add_crumb( $args['home'], apply_filters( 'woocommerce_breadcrumb_home_url', home_url() ) );
+		}
+
+		$args['breadcrumb'] = $breadcrumbs->generate();
+
+		wc_get_template( 'global/breadcrumb.php', $args );
+	}
+
+	add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
+	function woo_custom_breadrumb_home_url() {
+	    return '';
+	}
+}
 ?>
