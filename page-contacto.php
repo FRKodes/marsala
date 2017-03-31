@@ -21,7 +21,7 @@ get_header(); ?>
 						<div class="form-group"><input type="text" name="telefono" class="form-control" placeholder="Teléfono"></div>
 						<div class="form-group"><input type="text" name="asunto" class="form-control" placeholder="asunto"></div>
 						<div class="form-group"><textarea name="mensaje" id="mensaje" cols="30" rows="10" class="form-control" placeholder="*Mensaje"></textarea></div>
-						<div class="form-group"><input type="submit" value="Enviar" class="btn btn-primary"></div>
+						<div class="form-group"><input type="submit" value="Enviar" class="btn btn-primary black"></div>
 					</form>
 				</div>
 			</div>
@@ -34,98 +34,106 @@ get_header(); ?>
 			<div class="row">
 				<div class="container">
 					<div class="shop-item col-sm-4 col-sm-3">
-						<div class="shop-title">lorem ipsum local</div>
-						<div class="address">
+						<div class="shop-title fjala">lorem local</div>
+						<div class="shop-info">
 							<div class="line-1">
-								<span class="icon-"></span> Ottawa #1129 Col. Providencia C.P 44640
+								<p class="address"><span class="icon-"></span> Ottawa #1129 Col. Providencia</p>
+								<p class="cp">C.P 44640</p>
 							</div>
 							<div class="line-2">
-								<span class="icon-cel"></span> Cel. 33 1020 3040 <br>
-								Office (33) 3111 9004
+								<p class="cel"><span class="icon-cel"></span> Cel. 33 1020 3040 <br></p>
+								<p class="office">Office (33) 3111 9004</p>
 							</div>
 						</div>
 					</div>
 					<div class="shop-item col-sm-4 col-sm-3">
-						<div class="shop-title">lorem ipsum local</div>
-						<div class="address">
+						<div class="shop-title fjala">lorem local</div>
+						<div class="shop-info">
 							<div class="line-1">
-								<span class="icon-"></span> Ottawa #1129 Col. Providencia C.P 44640
+								<p class="address"><span class="icon-"></span> Ottawa #1129 Col. Providencia</p>
+								<p class="cp">C.P 44640</p>
 							</div>
 							<div class="line-2">
-								<span class="icon-cel"></span> Cel. 33 1020 3040 <br>
-								Office (33) 3111 9004
+								<p class="cel"><span class="icon-cel"></span> Cel. 33 1020 3040 <br></p>
+								<p class="office">Office (33) 3111 9004</p>
 							</div>
 						</div>
 					</div>
 					<div class="shop-item col-sm-4 col-sm-3">
-						<div class="shop-title">lorem ipsum local</div>
-						<div class="address">
+						<div class="shop-title fjala">lorem local</div>
+						<div class="shop-info">
 							<div class="line-1">
-								<span class="icon-"></span> Ottawa #1129 Col. Providencia C.P 44640
+								<p class="address"><span class="icon-"></span> Ottawa #1129 Col. Providencia</p>
+								<p class="cp">C.P 44640</p>
 							</div>
 							<div class="line-2">
-								<span class="icon-cel"></span> Cel. 33 1020 3040 <br>
-								Office (33) 3111 9004
+								<p class="cel"><span class="icon-cel"></span> Cel. 33 1020 3040 <br></p>
+								<p class="office">Office (33) 3111 9004</p>
 							</div>
 						</div>
 					</div>
 					<div class="shop-item col-sm-4 col-sm-3">
-						<div class="shop-title">lorem ipsum local</div>
-						<div class="address">
+						<div class="shop-title fjala">lorem local</div>
+						<div class="shop-info">
 							<div class="line-1">
-								<span class="icon-"></span> Ottawa #1129 Col. Providencia C.P 44640
+								<p class="address"><span class="icon-"></span> Ottawa #1129 Col. Providencia</p>
+								<p class="cp">C.P 44640</p>
 							</div>
 							<div class="line-2">
-								<span class="icon-cel"></span> Cel. 33 1020 3040 <br>
-								Office (33) 3111 9004
+								<p class="cel"><span class="icon-cel"></span> Cel. 33 1020 3040 <br></p>
+								<p class="office">Office (33) 3111 9004</p>
 							</div>
 						</div>
 					</div>
 					<div class="shop-item col-sm-4 col-sm-3">
-						<div class="shop-title">lorem ipsum local</div>
-						<div class="address">
+						<div class="shop-title fjala">lorem local</div>
+						<div class="shop-info">
 							<div class="line-1">
-								<span class="icon-"></span> Ottawa #1129 Col. Providencia C.P 44640
+								<p class="address"><span class="icon-"></span> Ottawa #1129 Col. Providencia</p>
+								<p class="cp">C.P 44640</p>
 							</div>
 							<div class="line-2">
-								<span class="icon-cel"></span> Cel. 33 1020 3040 <br>
-								Office (33) 3111 9004
+								<p class="cel"><span class="icon-cel"></span> Cel. 33 1020 3040 <br></p>
+								<p class="office">Office (33) 3111 9004</p>
 							</div>
 						</div>
 					</div>
 					<div class="shop-item col-sm-4 col-sm-3">
-						<div class="shop-title">lorem ipsum local</div>
-						<div class="address">
+						<div class="shop-title fjala">lorem local</div>
+						<div class="shop-info">
 							<div class="line-1">
-								<span class="icon-"></span> Ottawa #1129 Col. Providencia C.P 44640
+								<p class="address"><span class="icon-"></span> Ottawa #1129 Col. Providencia</p>
+								<p class="cp">C.P 44640</p>
 							</div>
 							<div class="line-2">
-								<span class="icon-cel"></span> Cel. 33 1020 3040 <br>
-								Office (33) 3111 9004
+								<p class="cel"><span class="icon-cel"></span> Cel. 33 1020 3040 <br></p>
+								<p class="office">Office (33) 3111 9004</p>
 							</div>
 						</div>
 					</div>
 					<div class="shop-item col-sm-4 col-sm-3">
-						<div class="shop-title">lorem ipsum local</div>
-						<div class="address">
+						<div class="shop-title fjala">lorem local</div>
+						<div class="shop-info">
 							<div class="line-1">
-								<span class="icon-"></span> Ottawa #1129 Col. Providencia C.P 44640
+								<p class="address"><span class="icon-"></span> Ottawa #1129 Col. Providencia</p>
+								<p class="cp">C.P 44640</p>
 							</div>
 							<div class="line-2">
-								<span class="icon-cel"></span> Cel. 33 1020 3040 <br>
-								Office (33) 3111 9004
+								<p class="cel"><span class="icon-cel"></span> Cel. 33 1020 3040 <br></p>
+								<p class="office">Office (33) 3111 9004</p>
 							</div>
 						</div>
 					</div>
 					<div class="shop-item col-sm-4 col-sm-3">
-						<div class="shop-title">lorem ipsum local</div>
-						<div class="address">
+						<div class="shop-title fjala">lorem local</div>
+						<div class="shop-info">
 							<div class="line-1">
-								<span class="icon-"></span> Ottawa #1129 Col. Providencia C.P 44640
+								<p class="address"><span class="icon-"></span> Ottawa #1129 Col. Providencia</p>
+								<p class="cp">C.P 44640</p>
 							</div>
 							<div class="line-2">
-								<span class="icon-cel"></span> Cel. 33 1020 3040 <br>
-								Office (33) 3111 9004
+								<p class="cel"><span class="icon-cel"></span> Cel. 33 1020 3040 <br></p>
+								<p class="office">Office (33) 3111 9004</p>
 							</div>
 						</div>
 					</div>
