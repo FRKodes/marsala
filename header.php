@@ -41,10 +41,10 @@
 			  <span class="hidden-sm hidden-md hidden-lg"><?php storefront_handheld_footer_bar_cart_link(); ?></span>
 			</div>
 
-			<div id="navbar" class="navbar-collapse collapse">
+			<!-- <div id="navbar" class="navbar-collapse collapse"> -->
 				<?php wp_nav_menu(array('theme_location' => 'primary', 'container_class' => 'primary-navigation' ) ); ?>
 				<span class="hidden-xs"><?php storefront_handheld_footer_bar_cart_link(); ?></span>
-			</div><!--/.nav-collapse -->
+			<!-- </div>/.nav-collapse  -->
 		  </div>
 		</nav>
 	</header><!-- #masthead -->

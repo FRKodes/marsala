@@ -18,3 +18,10 @@ function initMap() {
 //   itemSelector: '.grid-item',
 //   columnWidth: 100
 // });
+
+jQuery('.primary-navigation').addClass('navbar-collapse collapse');
+jQuery('#menu-main-menu').addClass('nav navbar-nav');
+jQuery('ul.sub-menu').addClass('dropdown-menu');
+jQuery('.nav li:has(ul)').addClass('dropdown');
+// jQuery('li.dropdown').firstChild().addClass('dropdown-toggle');
+// jQuery('.#menu-main-menu').addClass('dropdown');
