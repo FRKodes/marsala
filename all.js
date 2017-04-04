@@ -34,3 +34,12 @@ jQuery('ul.sub-menu').addClass('dropdown-menu');
 jQuery('.nav li:has(ul)').addClass('dropdown');
 // jQuery('li.dropdown').firstChild().addClass('dropdown-toggle');
 // jQuery('.#menu-main-menu').addClass('dropdown');
+
+jQuery( window ).scroll(function() {
+  var vertical_position = jQuery('body').scrollTop();
+  if (vertical_position >=1) {
+    jQuery('.navbar').addClass('transparent');
+  }else{
+    jQuery('.navbar').removeClass('transparent');
+  };
+});

@@ -11,3 +11,86 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  storefront-child
 */
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "icons-font";
+  src:url("./fonts/icons-font.eot");
+  src:url("./fonts/icons-font.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/icons-font.woff") format("woff"),
+    url("./fonts/icons-font.ttf") format("truetype"),
+    url("./fonts/icons-font.svg#icons-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "icons-font" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "icons-font" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back-top:before {
+  content: "\61";
+}
+.icon-bag:before {
+  content: "\62";
+}
+.icon-cuadritos:before {
+  content: "\63";
+}
+.icon-facebook:before {
+  content: "\64";
+}
+.icon-favoritos:before {
+  content: "\65";
+}
+.icon-flecha:before {
+  content: "\66";
+}
+.icon-flecha-der:before {
+  content: "\67";
+}
+.icon-flecha-izq:before {
+  content: "\68";
+}
+.icon-instagram:before {
+  content: "\69";
+}
+.icon-personalizar:before {
+  content: "\6a";
+}
+.icon-pin:before {
+  content: "\6c";
+}
+.icon-rayitas:before {
+  content: "\6d";
+}
+.icon-telefono:before {
+  content: "\6e";
+}
+.icon-twitter:before {
+  content: "\6f";
+}
