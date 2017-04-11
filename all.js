@@ -35,6 +35,11 @@ jQuery('.nav li:has(ul)').addClass('dropdown');
 // jQuery('li.dropdown').firstChild().addClass('dropdown-toggle');
 // jQuery('.#menu-main-menu').addClass('dropdown');
 
+jQuery('.navbar-toggle').on('click',function (){
+  console.log('clicked!');
+  jQuery('.primary-navigation').toggleClass('in');
+});
+
 jQuery( window ).scroll(function() {
   var vertical_position = jQuery('body').scrollTop();
   if (vertical_position >=1) {

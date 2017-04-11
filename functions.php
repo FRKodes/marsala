@@ -17,6 +17,16 @@ register_nav_menus( array(
 	'footer_menu_productos' => 'Footer Productos'
 ) );
 
+if (  ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
+
+	/**
+	 * Show the product title in the product loop. By default this is an H3.
+	 */
+	function woocommerce_template_loop_product_title() {
+		echo '<h3>' . get_the_title() . '</h3> <hr> ';
+	}
+}
+
 if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 
 	/**

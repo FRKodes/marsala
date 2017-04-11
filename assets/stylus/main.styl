@@ -133,14 +133,19 @@ h1.woocommerce-breadcrumb
 			height 40px
 			width auto
 	.navbar-collapse
-		background none
+		background rgba(white, .9)
 		margin-left -10%
 		padding-bottom 20px
 		padding-top 20px
 		position absolute
+		padding-left 15px
+		padding-right 15px
 		top 50px
 		width 110%
 		border none
+.navbar-nav
+	margin-left 5px
+	margin-right 5px
 .page-template-default
 	.navbar-collapse
 		position relative
@@ -278,6 +283,35 @@ form
 		p.cel
 		p.office
 			margin-bottom 0
+ul.products
+	li.product
+		img
+			margin-bottom 0 !important
+			width 100%
+		span.price
+			color white
+			margin-bottom 0
+	h3
+		color white
+		text-transform uppercase
+		margin-bottom 0
+.title-price-container
+	background rgba(black, .6)
+	height 80px
+	display flex
+	flex-direction column
+	justify-content center
+	align-items center
+	margin-top -80px
+	position relative
+	hr
+		width 140px
+		margin 5px auto
+.woocommerce-breadcrumb
+	a
+		display none
+#secondary
+	display none
 footer
 	&.site-footer
 		background none
@@ -422,6 +456,10 @@ footer
 		margin-top -200px
 	#map
 		height 720px
+	.archive
+		.site-content
+			width 720px
+			margin 0 auto
 	footer
 		&.site-footer
 			.container
@@ -468,3 +506,10 @@ footer
 		height 400px
 		h2
 			font-size 3em
+	.archive
+		.site-content
+			width 940px
+@media screen and (min-width: 1200px)
+	.archive
+		.site-content
+			width 1140px
