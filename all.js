@@ -25,8 +25,9 @@ function initMap() {
 
 // jQuery('.grid').masonry({
 //   itemSelector: '.grid-item',
-//   columnWidth: 100
+//   columnWidth: 160
 // });
+
 
 jQuery('.primary-navigation').addClass('navbar-collapse collapse');
 jQuery('#menu-main-menu').addClass('nav navbar-nav');

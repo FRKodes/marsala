@@ -3,7 +3,8 @@ gris1 = #b2b2b2
 gris2 = #5f5f5f
 gris3 = #d5d5d5
 gris4 = #dddddd
-
+img
+	border-radius 0px !important
 .galery-photos-container
 	overflow hidden
 .grid-item
@@ -40,6 +41,14 @@ textarea
 	width 50%
 .grid-item-100
 	width 100%
+
+.customize-photos-container
+	.left
+		float left
+		width 40%
+	.right
+		float right
+		width 60%	
 .fjala
 	font-family 'Fjalla One', sans-serif
 .transparent
@@ -317,6 +326,47 @@ ul.products
 	div.product
 		.price
 			text-align center
+		.images
+			width 88%
+			margin-bottom 0 !important
+			.icons-container
+				position absolute
+				right 0
+				width 10%
+				display flex
+				flex-direction column
+				.icon-favoritos
+				.icon-bag
+				.icon-personalizar
+					color gris0
+					font-size 1.6em
+			.thumbnails
+				overflow hidden
+			.quantity
+				display none
+		form.cart
+			.button
+				float none
+				width 100%
+				text-transform uppercase
+		form.cart
+			.quantity
+				display none
+	ul.products
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		&:before
+		&:after
+			display none
+		li.product
+			width 46%
+			margin-bottom 20px
+			h3
+				font-size .8em
+			.title-price-container
+				hr
+					width 90px
 #secondary
 	display none
 footer
@@ -351,12 +401,22 @@ footer
 			a
 			a:not(.button)
 				color gris0
+				font-size 2em
+				
 	.footer-logo
 		text-align center
 		img
 			width 50px
 			display inline-block
 @media screen and (min-width: 768px)
+	// .page-template-default
+	// 	.site-content
+	// 		width 738px
+	// 		margin-left auto
+	// 		margin-right auto
+	.customize-photos-container
+		width 738px
+		margin 0 auto
 	.home.page:not(.page-template-template-homepage)
 		.site-header
 			height 100px
@@ -467,6 +527,38 @@ footer
 		.site-content
 			width 720px
 			margin 0 auto
+	.single-product
+		.site-content
+			margin 0 auto
+			width 738px
+		div.product
+			.price
+				margin-bottom 30px
+			.summary
+				margin-top 120px !important
+			.images
+				.icons-container
+					width 53%
+					a
+						display flex
+						justify-content flex-start
+						margin-bottom 20px
+						span
+							font-size .5em
+							margin-left 10px
+				.woocommerce-main-image
+					margin-bottom 10px !important
+			.thumbnails
+				a.zoom
+					width 24% !important
+					margin-right 1% !important
+		ul.products
+			align-items flex-start
+			li.product
+				width 24% !important
+				margin-right 0 !important
+		.woocommerce-LoopProduct-link
+			display none
 	footer
 		&.site-footer
 			.container
@@ -516,7 +608,15 @@ footer
 	.archive
 		.site-content
 			width 940px
+	.single-product
+		.site-content
+			width 962px
+	.customize-photos-container
+		width 768px
 @media screen and (min-width: 1200px)
 	.archive
 		.site-content
 			width 1140px
+	.single-product
+		.site-content
+			width 1170px

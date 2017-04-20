@@ -23,4 +23,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 // the_title( '<h1 itemprop="name" class="product_title entry-title">', '</h1>' );
 ?>
 
-<div style="display:block;clear:both">&nbsp;</div>
+<div style="display:block;clear:both;height:0px">&nbsp;</div>

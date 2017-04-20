@@ -62,4 +62,8 @@ if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 }
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+function woocommerce_output_related_products() {
+	woocommerce_related_products(4,4);
+}
 ?>
