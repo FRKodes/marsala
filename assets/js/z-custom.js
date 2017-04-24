@@ -27,6 +27,8 @@ jQuery('.nav li:has(ul)').addClass('dropdown');
 // jQuery('li.dropdown').firstChild().addClass('dropdown-toggle');
 // jQuery('.#menu-main-menu').addClass('dropdown');
 
+jQuery('#masthead .footer-cart-contents').addClass('icon-bag');
+
 jQuery('.navbar-toggle').on('click',function (){
   console.log('clicked!');
   jQuery('.primary-navigation').toggleClass('in');
