@@ -33,8 +33,13 @@ jQuery('.primary-navigation').addClass('navbar-collapse collapse');
 jQuery('#menu-main-menu').addClass('nav navbar-nav');
 jQuery('ul.sub-menu').addClass('dropdown-menu');
 jQuery('.nav li:has(ul)').addClass('dropdown');
+
 // jQuery('li.dropdown').firstChild().addClass('dropdown-toggle');
 // jQuery('.#menu-main-menu').addClass('dropdown');
+
+jQuery('li.dropdown').on('click', function (){
+  jQuery('#' + jQuery(this).attr('id')).first('dropdown-menu').toggleClass('show');
+});
 
 jQuery('#masthead .footer-cart-contents').addClass('icon-bag');
 

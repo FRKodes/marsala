@@ -34,7 +34,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand header-logo" href="#">
+			  <a class="navbar-brand header-logo" href="/">
 			  	<img class="hidden-sm hidden-md hidden-lg" src="<?php echo get_stylesheet_directory_uri()."/assets/images/mmarsala-black.svg"; ?>" alt="mini logo header mmarsala">
 			  	<img class="hidden-xs" src="<?php echo get_stylesheet_directory_uri()."/assets/images/logo-marsala-normal.svg"; ?>" alt="logo mmarsala">
 			  </a>
