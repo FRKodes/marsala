@@ -24,8 +24,8 @@
 					</div>
 					<div class="second-block">
 						<ul class="social">
-							<li><a href="https://www.facebook.com/Marsalamarsala3/" class="icon-facebook"></a></li>
-							<li><a href="https://www.instagram.com/marsalamarsala/" class="icon-instagram"></a></li>
+							<li><a target="_blank" href="https://www.facebook.com/Marsalamarsala3/" class="icon-facebook"></a></li>
+							<li><a target="_blank" href="https://www.instagram.com/marsalamarsala/" class="icon-instagram"></a></li>
 						</ul>
 						<div class="footer-logo"><img src="<?php echo get_stylesheet_directory_uri()."/assets/images/mmarsala.svg"; ?>" alt="logo footer mmarsala"></div>
 						<p class="text-center">Copyright &copy; 2017 MARSALA. <br>All right reserved.</p>

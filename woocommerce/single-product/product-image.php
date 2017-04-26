@@ -24,7 +24,7 @@ global $post, $product;
 ?>
 <div class="images marsala">
 	<div class="icons-container">
-		<a href="#" class="icon-favoritos"><span class="hidden-xs">AGREGAR A FAVORITOS</span></a>
+		<a href="<?php echo $_SERVER['REQUEST_URI']. '?add_to_wishlist=' . $product->id; ?>"  rel="nofollow" data-product-id="<?php echo $product->id ?>" data-product-type="<?php echo $product->product_type; ?>" class="icon-favoritos"><span class="hidden-xs">AGREGAR A FAVORITOS</span></a>
 		<a href="#" class="icon-bag"><span class="hidden-xs">COMPRAR</span></a>
 		<a href="#" class="icon-personalizar"><span class="hidden-xs">PERSONALIZAR</span></a>
 	</div>

@@ -5,6 +5,13 @@ gris3 = #d5d5d5
 gris4 = #dddddd
 a
 	color gris2 !important
+	&.checkout-button
+	&.wc-backward
+	&.view
+	&.woocommerce-Button
+		color white !important
+	&.woocommerce-Button
+		padding 5px 15px !important
 button
 input[type="button"]
 input[type="reset"]
@@ -42,6 +49,8 @@ img
 	width 100%
 	&.sub-menu
 		margin-left 15px
+		li
+			width 100%
 ul.menu
 	li
 		a
@@ -446,10 +455,11 @@ ul.products
 					width 90px
 #secondary
 	display none
-.woocommerce-account
-	.entry-header
-		h1
-			display none
+.entry-header
+	h1
+		display none
+a.button.add_to_cart_button
+	color white !important
 footer
 	&.site-footer
 		background none
@@ -749,6 +759,11 @@ footer
 			width 962px
 	.customize-photos-container
 		width 768px
+	.right-sidebar
+		.content-area
+			margin 0 auto !important
+			width 920px !important
+			float none !important
 @media screen and (min-width: 1200px)
 	.archive
 		.site-content
@@ -756,3 +771,6 @@ footer
 	.single-product
 		.site-content
 			width 1170px
+	.right-sidebar
+		.content-area
+			width 1140px !important
