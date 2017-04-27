@@ -25,7 +25,13 @@ global $post, $product;
 <div class="images marsala">
 	<div class="icons-container">
 		<a href="<?php echo $_SERVER['REQUEST_URI']. '?add_to_wishlist=' . $product->id; ?>"  rel="nofollow" data-product-id="<?php echo $product->id ?>" data-product-type="<?php echo $product->product_type; ?>" class="icon-favoritos"><span class="hidden-xs">AGREGAR A FAVORITOS</span></a>
-		<a href="#" class="icon-bag"><span class="hidden-xs">COMPRAR</span></a>
+		
+		<form class="cart" method="post" enctype="multipart/form-data">
+			<div class="quantity"><input type="number" step="1" min="1" max="10" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"></div>
+			<input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>">
+			<button type="submit" class="icon-bag"><span class="hidden-xs"> COMPRAR</span></button>
+		</form>
+
 		<a href="#" class="icon-personalizar"><span class="hidden-xs">PERSONALIZAR</span></a>
 	</div>
 	<?php

@@ -7,11 +7,26 @@ a
 	color gris2 !important
 	&.checkout-button
 	&.wc-backward
+	&.wc-forward
 	&.view
 	&.woocommerce-Button
 		color white !important
 	&.woocommerce-Button
 		padding 5px 15px !important
+	&.add_to_wishlist
+		display none
+button.icon-bag
+	background none !important
+	border none !important
+	box-shadow none !important
+	padding 0 !important
+	font-family 'Montserrat' !important
+	span
+		font-size 0.5em
+		color gris2
+	&:before
+		font-size 1.2em
+		color gris2 !important
 button
 input[type="button"]
 input[type="reset"]
@@ -426,6 +441,8 @@ ul.products
 				.icon-personalizar
 					color gris0
 					font-size 1.6em
+				.cart
+					margin-bottom 0
 			.thumbnails
 				overflow hidden
 			.quantity
@@ -666,6 +683,16 @@ footer
 		.site-content
 			width 720px
 			margin 0 auto
+	ul.products
+		li.product
+			height 270.5px
+			overflow hidden
+			&:hover .title-price-container
+				margin-top -80px
+				transition .2s ease
+	.title-price-container
+		margin-top 0
+		transition .3s ease
 	.single-product
 		.site-content
 			margin 0 auto
@@ -674,7 +701,7 @@ footer
 			.price
 				margin-bottom 30px
 			.summary
-				margin-top 120px !important
+				margin-top 150px !important
 			.images
 				.icons-container
 					width 53%
