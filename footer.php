@@ -34,7 +34,7 @@
 			</div>
 		</div><!-- .col-full -->
 	</footer><!-- #colophon -->
-
+	<div class="go-up-btn"><a href="#masthead" id="go-to-top"><span class="icon-back-top"></span></a></div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

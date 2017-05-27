@@ -38,8 +38,58 @@ input[type="submit"]
 	background-color black !important
     border-color black !important
     color #ffffff !important
+.woocommerce-info
+	background-color gris1 !important
+.woocommerce-message
+	background-color gris1 !important
+	.button
+		background-color transparent !important
+th.product-remove
+th.product-thumbnail
+th.product-name
+th.product-price
+th.product-quantity
+th.product-subtotal
+th.product-stock-status
+th.product-add-to-cart
+	display none
 img
 	border-radius 0px !important
+.columns-selector
+	.icon-cuadritos
+	.icon-rayitas
+		font-size 2em
+		margin-left 6px
+		display inline-block
+.alpha_50
+	opacity .5
+.shop_table
+	height auto
+	overflow hidden
+	float left
+	width 100%
+	margin-bottom 40px
+.cart_item
+	margin-bottom 30px
+	.product-quantity
+		.qty
+			width 3em
+			padding-top 0
+			padding-bottom 0
+.wishlist-out-of-stock
+	color #EA4335
+.hentry .wp-post-image
+	width 100% !important
+	margin-bottom 0 !important
+.coupon-block-stuff
+	margin-top 30px
+	margin-bottom 30px
+	text-align center
+	.coupon
+		.button
+			margin-top 10px
+	.button
+		margin-top 30px
 .galery-photos-container
 	overflow hidden
 .grid-item
@@ -82,10 +132,22 @@ ul.menu
 		color white
 		display inline-flex
 		position absolute
-		bottom 0px
+		bottom 1px
 		font-size .8em
 		right 11px
-		
+.go-up-btn
+	position fixed
+	width 46px
+	height 50px
+	right 30px
+	bottom 30px
+	z-index 10
+	opacity 1
+	transition opacity 2s ease
+	font-size 3em
+	&.hidden
+		opacity 0
+		transition opacity 2s ease
 .form-control
 .input-text
 input[type=text]
@@ -722,7 +784,14 @@ footer
 			align-items flex-start
 			li.product
 				width 24% !important
+				height 170px
+				overflow hidden
+				position relative
 				margin-right 0 !important
+				.title-price-container
+					position absolute
+					bottom 0
+					width 100%
 		.woocommerce-LoopProduct-link
 			display none
 	.woocommerce
@@ -784,6 +853,9 @@ footer
 	.single-product
 		.site-content
 			width 962px
+		ul.products
+			li.product
+				height 220px
 	.customize-photos-container
 		width 768px
 	.right-sidebar
@@ -791,6 +863,9 @@ footer
 			margin 0 auto !important
 			width 920px !important
 			float none !important
+	.home
+		#primary
+			width 100% !important
 @media screen and (min-width: 1200px)
 	.archive
 		.site-content
@@ -798,6 +873,11 @@ footer
 	.single-product
 		.site-content
 			width 1170px
+		ul.products
+			li.product
+				height 270px
+				.title-price-container
+					position relative
 	.right-sidebar
 		.content-area
 			width 1140px !important

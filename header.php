@@ -17,6 +17,10 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 <?php wp_head(); ?>
+<style>
+	.woocommerce-info, .woocommerce-noreviews, p.no-comments{ background-color: #b2b2b2}
+	.cart-collaterals .cart_totals{float: none; margin: 0 auto}
+</style>
 </head>
 
 <body <?php body_class(); ?>>

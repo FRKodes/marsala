@@ -53,6 +53,11 @@ get_header( 'shop' ); ?>
 				 */
 				// do_action( 'woocommerce_before_shop_loop' );
 			?>
+			<!-- Toggle 1 or 2 columns -->
+			<div class="columns-selector text-right hidden-sm">
+				<a id="one-column" class="alpha_50" href="#toggle-columns"><span class="icon-cuadritos"></span> </a>
+				<a id="two-column" href="#toggle-columns"><span class="icon-rayitas"></span> </a>
+			</div>
 
 			<?php woocommerce_product_loop_start(); ?>
 
