@@ -34,6 +34,18 @@ global $post, $product;
 
 		<a href="#" class="icon-personalizar"><span class="hidden-xs">PERSONALIZAR</span></a>
 	</div>
+	
+	<div class="customize-it-form">
+		<div class="form-group radios">
+			<input type="radio" name="color_tecnica" value="Dorado" checked> <span>Dorado </span>
+			<input type="radio" name="color_tecnica" value="Grabado"> <span>Grabado </span>
+			<input type="radio" name="color_tecnica" value="Broquelado"> <span>Broquelado </span>
+		</div>
+		<div class="form-group left"><input type="text" name="phrase" id="phrase" class="form-control" placeholder="Ingresa la frase para personalizar"></div>
+		<div class="form-group right"><button class="btn btn-primary submit ok-btn">OK</button></div>
+		<div class="custom-phrase text-center"></div>
+	</div>
+
 	<?php
 		if ( has_post_thumbnail() ) {
 			$attachment_count = count( $product->get_gallery_attachment_ids() );

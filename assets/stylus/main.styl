@@ -3,6 +3,21 @@ gris1 = #b2b2b2
 gris2 = #5f5f5f
 gris3 = #d5d5d5
 gris4 = #dddddd
+.back-gray
+	background-color gris2
+	color white
+.nosotros-main-content
+	width 240%
+	margin-left -70%
+	padding-top 20px
+	padding-bottom 10px
+	line-height 2em
+	margin-top 20px
+	margin-bottom 20px
+	font-size 1.2em
+	p
+		padding-left 30px
+		padding-right 30px
 a
 	color gris2 !important
 	&.checkout-button
@@ -187,6 +202,8 @@ textarea
 		width 60%	
 .fjala
 	font-family 'Fjalla One', sans-serif
+.kalam
+	font-family 'Kalam', cursive
 .transparent
 	background rgba(white, .99) !important
 	transition all 1s ease-out
@@ -393,6 +410,7 @@ h1.woocommerce-breadcrumb
 	display flex
 	justify-content center
 	align-items center
+	margin-top 20px
 	h2
 		color white
 		font-size 1.6em
@@ -449,6 +467,8 @@ ul.products
 		span.price
 			color white
 			margin-bottom 0
+	&.col-xs-6
+		margin-bottom 1.6em
 	h3
 		color white
 		text-transform uppercase
@@ -462,6 +482,7 @@ ul.products
 	align-items center
 	margin-top -80px
 	position relative
+	overflow hidden
 	hr
 		width 140px
 		margin 5px auto
@@ -469,7 +490,6 @@ ul.products
 	a
 		display none
 /*SINGLE PRODUCT*/
-
 .single-product
 	.navbar-default
 		.navbar-brand
@@ -505,6 +525,13 @@ ul.products
 					font-size 1.6em
 				.cart
 					margin-bottom 0
+				a:active
+				a:focus
+				a:visited
+				a:hover
+					outline 0
+					text-decoration none
+					
 			.thumbnails
 				overflow hidden
 			.quantity
@@ -517,6 +544,46 @@ ul.products
 		form.cart
 			.quantity
 				display none
+	.customize-it-form
+		position absolute
+		width 88.5%
+		top -40px
+		opacity 0
+		transition top .3s ease, opacity .5s ease
+		.form-group
+			display inline-block
+			opacity 1
+			transition opacity .5s ease
+			&.left
+				width 78%
+			&.right
+				width 20%
+				button
+					width 100%
+					text-align center
+					border-radius 0
+			&.opacity_0
+				opacity 0
+				transition opacity .5s ease
+			&.radios
+				margin-bottom 0
+		.custom-phrase
+			font-size 1.6em
+			color #FFD700
+			margin-top 65px
+			font-weight bold
+			opacity 0
+			transition opacity .5s ease
+			&.grabado
+				color #333
+				text-shadow 0px 1px 0px rgba(255,255,255,.5)
+		&.active
+			top 16px
+			opacity 1
+			transition top .3s ease, opacity .5s ease
+			.custom-phrase
+				opacity 1
+				transition opacity .5s ease
 	ul.products
 		display flex
 		justify-content space-between
@@ -724,6 +791,11 @@ footer
 	.nosotros-banner-container
 		height 430px
 		margin-bottom 40px
+	.nosotros-main-content
+		font-size 1.3em
+		p
+			padding-left 0
+			padding-right 0
 	.nosotros-images-container
 		margin-top 30px
 		justify-content space-between
@@ -747,14 +819,14 @@ footer
 			margin 0 auto
 	ul.products
 		li.product
-			height 270.5px
+			height 200px
 			overflow hidden
 			&:hover .title-price-container
 				margin-top -80px
 				transition .2s ease
-	.title-price-container
-		margin-top 0
-		transition .3s ease
+		.title-price-container
+			margin-top -80px
+			transition .3s ease
 	.single-product
 		.site-content
 			margin 0 auto
@@ -780,6 +852,16 @@ footer
 				a.zoom
 					width 24% !important
 					margin-right 1% !important
+		.customize-it-form
+			width 41.5%
+			&.active
+				top 20px
+			.form-group.radios
+				margin-bottom 9px
+				span
+					margin-right 10px
+			.custom-phrase
+				margin-top 80px
 		ul.products
 			align-items flex-start
 			li.product
@@ -850,6 +932,11 @@ footer
 	.archive
 		.site-content
 			width 940px
+	ul.products
+		li.product
+			height 270px
+		.title-price-container
+			margin-top -80px
 	.single-product
 		.site-content
 			width 962px
@@ -858,6 +945,10 @@ footer
 				height 220px
 	.customize-photos-container
 		width 768px
+	.single-product
+		.customize-it-form
+			.custom-phrase
+				margin-top 120px
 	.right-sidebar
 		.content-area
 			margin 0 auto !important
@@ -870,6 +961,20 @@ footer
 	.archive
 		.site-content
 			width 1140px
+	.site-main
+		ul.products
+			li.product
+				height 335px
+				&:hover .title-price-container
+					margin-top -80px
+					transition margin-top .3s ease
+				.title-price-container
+					margin-top 0px
+					transition margin-top .3s ease
+	.single-product
+		.customize-it-form
+			.custom-phrase
+				margin-top 160px
 	.single-product
 		.site-content
 			width 1170px

@@ -20,14 +20,28 @@ get_header(); ?>
 				<div class="container customize-photos-container">
 					<div class="row">
 						<div class="left">
-							<div class="grid-item grid-item-left"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/personaliza-marsala-01.jpg" alt="personaliza marsala 01"></div>
-							<div class="grid-item grid-item-left"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/personaliza-marsala-05.jpg" alt="personaliza marsala 05"></div>
-							<div class="grid-item grid-item-left"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/personaliza-marsala-03.jpg" alt="personaliza marsala 03"></div>
+							<?php $args = array('post_type'=> 'customize_item', 'sides' => 'left-side');
+							$query = new WP_Query( $args );
+
+							if ( $query->have_posts() ) : ?>
+							    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+							    	<div class="grid-item grid-item-left"><a href="<?php the_field('link'); ?>" title="Ver <?php the_title(); ?>"><?php the_post_thumbnail(); ?></a></div>
+							    <?php endwhile; wp_reset_postdata(); ?>
+							<?php else : ?>
+							    <!-- show 404 error here -->
+							<?php endif; ?>
 						</div>
 						<div class="right">
-							<div class="grid-item grid-item-right"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/personaliza-marsala-02.jpg" alt="personaliza marsala 02"></div>
-							<div class="grid-item grid-item-right"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/personaliza-marsala-04.jpg" alt="personaliza marsala 04"></div>
-							<div class="grid-item grid-item-right"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/personaliza-marsala-06.jpg" alt="personaliza marsala 06"></div>
+							<?php $args = array('post_type'=> 'customize_item', 'sides' => 'right-side');
+							$query = new WP_Query( $args );
+
+							if ( $query->have_posts() ) : ?>
+							    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+							    	<div class="grid-item grid-item-right"><a href="<?php the_field('link'); ?>" title="Ver <?php the_title(); ?>"><?php the_post_thumbnail(); ?></a></div>
+							    <?php endwhile; wp_reset_postdata(); ?>
+							<?php else : ?>
+							    <!-- show 404 error here -->
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>

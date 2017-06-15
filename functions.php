@@ -1,14 +1,14 @@
 <?php
 function my_theme_enqueue_styles() {
 
-    $parent_style = 'parent-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
+	$parent_style = 'parent-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
 
-    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style',
-        get_stylesheet_directory_uri() . '/marsala-style.css',
-        array( $parent_style ),
-        wp_get_theme()->get('Version')
-    );
+	wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'child-style',
+		get_stylesheet_directory_uri() . '/marsala-style.css',
+		array( $parent_style ),
+		wp_get_theme()->get('Version')
+	);
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
@@ -57,7 +57,7 @@ if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 
 	add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
 	function woo_custom_breadrumb_home_url() {
-	    return '';
+		return '';
 	}
 }
 
@@ -66,4 +66,64 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 function woocommerce_output_related_products() {
 	woocommerce_related_products(4,4);
 }
+
+
+add_action( 'woocommerce_process_product_meta', 'wc_custom_save_custom_fields' );
+function wc_custom_save_custom_fields( $post_id ) {
+	if ( ! empty( $_POST['product-custom-style'] ) ) {
+		update_post_meta( $post_id, 'product-custom-style', esc_attr( $_POST['product-custom-style'] ) );
+	}
+}
+
+add_action( 'init', 'create_costomize_item_post_type' );
+function create_costomize_item_post_type() {
+	register_post_type( 'customize_item',
+	array(
+		'labels' => array(
+			'name' => __( 'Items Personaliza' ),
+			'singular_name' => __( 'Item Personaliza' ),
+			'add_new' => __( 'Agregar otro Item Personaliza' )
+		),
+		'public' => true,
+		'has_archive' => false,
+		'supports'=> array('title', 'editor', 'thumbnail', 'page-attributes'),
+	)
+	);
+}
+
+//hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'create_topics_hierarchical_taxonomy', 0 );
+
+//create a custom taxonomy name it topics for your posts
+
+function create_topics_hierarchical_taxonomy() {
+
+// Add new taxonomy, make it hierarchical like categories first do the translations part for GUI
+  $labels = array(
+    'name' => _x( 'Sides', 'taxonomy general name' ),
+    'singular_name' => _x( 'Side', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search by Side' ),
+    'all_items' => __( 'All Sides' ),
+    'parent_item' => __( 'Parent Side' ),
+    'parent_item_colon' => __( 'Parent Side:' ),
+    'edit_item' => __( 'Edit Side' ), 
+    'update_item' => __( 'Update Side' ),
+    'add_new_item' => __( 'Add New Side' ),
+    'new_item_name' => __( 'New Side Name' ),
+    'menu_name' => __( 'Sides' ),
+  ); 	
+
+// Now register the taxonomy
+
+  register_taxonomy('sides',array('customize_item'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'side' ),
+  ));
+
+}
+
 ?>

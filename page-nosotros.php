@@ -15,9 +15,11 @@ get_header(); ?>
 					<div class="nosotros-banner-container"></div>
 				</div>
 
-				<?php get_template_part( 'content', 'page-only-content' );
+				<div class="back-gray nosotros-main-content kalam">
+					<?php get_template_part( 'content', 'page-only-content' );?>
+				</div>
 
-			endwhile; // End of the loop. ?>
+			<?php endwhile; // End of the loop. ?>
 			
 			<div class="container">
 				<div class="row">

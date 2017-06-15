@@ -21,15 +21,16 @@ get_header(); ?>
 					</div>
 				</div>
 
+				<div class="container gallery-banner">
+					<h2 class="">#MARSALATRAVELING</h2>
+				</div>
+
 				<?php get_template_part( 'content', 'page-only-content' );
 
 			endwhile; // End of the loop. ?>
 			
-			<div class="row gallery-banner">
-				<h2 class="">#MARSALATRAVELING</h2>
-			</div>
 
-			<div class="ig-container container">
+			<!-- <div class="ig-container container">
 				<div class="row">
 					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-1.png" alt=""></div>
 					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-2.png" alt=""></div>
@@ -40,7 +41,7 @@ get_header(); ?>
 					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-7.png" alt=""></div>
 					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-1.png" alt=""></div>
 				</div>
-			</div>
+			</div> -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -28,7 +28,6 @@ jQuery('.nav li:has(ul)').addClass('dropdown');
 jQuery('.cat-element .sub-menu').addClass('hidden');
 jQuery('li.cat-element').on('click', function (e){
   e.stopPropagation();
-  console.log(jQuery(this).attr('id'));
   jQuery('#' + jQuery(this).attr('id') + ' .dropdown-menu').toggleClass('hidden');
 });
 
@@ -38,10 +37,23 @@ jQuery('li.cat-element').on('click', function (e){
 
 jQuery('li.dropdown-prods').on('click', function (){
   jQuery('#' + jQuery(this).attr('id')).first('dropdown-menu').toggleClass('show');
-  console.log('okokok');
 });
 
 jQuery('#masthead .footer-cart-contents').addClass('icon-bag');
+
+jQuery('.icon-personalizar').on('click', function (){
+  jQuery('.customize-it-form').toggleClass('active');
+  jQuery('.customize-it-form .form-group').removeClass('opacity_0');
+});
+
+jQuery('.ok-btn').on('click', function (){
+  jQuery('.customize-it-form .form-group').toggleClass('opacity_0');
+});
+
+jQuery('#phrase').keyup(function (){
+  jQuery('.custom-phrase').html(jQuery(this).val());
+  jQuery('input[name="product-custom-style"]').html(jQuery(this).val() + ' | ' + jQuery('input[name="color_tecnica"]:checked').val());
+});
 
 jQuery('.navbar-toggle').on('click',function (){
   jQuery('.primary-navigation').toggleClass('in');
@@ -56,6 +68,17 @@ jQuery("#go-to-top").click(function() {
     jQuery('html, body').animate({
         scrollTop: jQuery("#masthead").offset().top
     }, 500);
+});
+
+jQuery('input[type=radio][name=color_tecnica]').change(function() {
+  jQuery('input[name="product-custom-style"]').html(jQuery('input[id="phrase"]').val() + ' | ' + jQuery('input[name="color_tecnica"]:checked').val());
+  if (this.value == 'Dorado') {
+    jQuery('.custom-phrase').removeClass('broquel grabado').addClass('gold');
+  }else if (this.value == 'Broquelado') {
+    jQuery('.custom-phrase').removeClass('gold grabado').addClass('broquel');
+  }else if (this.value == 'Grabado') {
+    jQuery('.custom-phrase').removeClass('gold broquel').addClass('grabado');
+  }
 });
 
 if (jQuery('p.stock:contains("Hay existencias")').length > 0) {
