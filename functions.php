@@ -7,8 +7,9 @@ function my_theme_enqueue_styles() {
 	wp_enqueue_style( 'child-style',
 		get_stylesheet_directory_uri() . '/marsala-style.css',
 		array( $parent_style ),
-		wp_get_theme()->get('Version')
+		'1.1'
 	);
+	// wp_get_theme()->get('Version')
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
@@ -125,5 +126,11 @@ function create_topics_hierarchical_taxonomy() {
   ));
 
 }
+
+add_filter('wc_add_to_cart_message', 'handler_function_name', 10, 2);
+function handler_function_name($message, $product_id) {
+    return '<p>Este producto fue añadido a tu carrito </p><a href="http://marsala.dev/carrito/" class="button wc-forward">Ver carrito</a>';
+}
+
 
 ?>

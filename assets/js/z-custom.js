@@ -81,6 +81,23 @@ jQuery('input[type=radio][name=color_tecnica]').change(function() {
   }
 });
 
+
+jQuery('select[name=color_tecnica]').change(function() {
+  console.log('changed!');
+  jQuery('input[name="product-custom-style"]').html(jQuery('input[id="phrase"]').val() + ' | ' + jQuery('select[name="color_tecnica"] option:selected').val());
+  if (this.value == 'Dorado') {
+    jQuery('.custom-phrase').removeClass('plateado naranja negro holograma').addClass('gold');
+  }else if (this.value == 'Plateado') {
+    jQuery('.custom-phrase').removeClass('gold naranja negro holograma').addClass('plateado');
+  }else if (this.value == 'Naranja') {
+    jQuery('.custom-phrase').removeClass('gold plateado negro holograma').addClass('naranja');
+  }else if (this.value == 'Negro') {
+    jQuery('.custom-phrase').removeClass('gold naranja plateado holograma').addClass('negro');
+  }else if (this.value == 'Holograma') {
+    jQuery('.custom-phrase').removeClass('gold  naranja negro ').addClass('holograma');
+  }
+});
+
 if (jQuery('p.stock:contains("Hay existencias")').length > 0) {
     jQuery('p.stock').addClass("hidden");
 }

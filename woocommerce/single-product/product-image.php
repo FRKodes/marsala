@@ -37,13 +37,24 @@ global $post, $product;
 	
 	<div class="customize-it-form">
 		<div class="form-group radios">
-			<input type="radio" name="color_tecnica" value="Dorado" checked> <span>Dorado </span>
-			<input type="radio" name="color_tecnica" value="Grabado"> <span>Grabado </span>
-			<input type="radio" name="color_tecnica" value="Broquelado"> <span>Broquelado </span>
+			<select name="color_tecnica" id="color_tecnica" class="select_gray">
+				<option value="">Selecciona el color del texto</option>
+				<option value="Dorado">Dorado</option>
+				<option value="Plateado">Plateado</option>
+				<option value="Naranja">Naranja</option>
+				<option value="Negro">Negro</option>
+				<option value="Holograma">Holograma</option>
+			</select>
+			<!-- <input type="radio" name="color_tecnica" value="Dorado" checked> <span>Dorado </span>
+			<input type="radio" name="color_tecnica" value="Plateado"> <span>Plateado </span>
+			<input type="radio" name="color_tecnica" value="Naranja"> <span>Naranja </span>
+			<input type="radio" name="color_tecnica" value="Negro"> <span>Negro </span>
+			<input type="radio" name="color_tecnica" value="Holograma"> <span>Holograma </span> -->
 		</div>
 		<div class="form-group left"><input type="text" name="phrase" id="phrase" class="form-control" placeholder="Ingresa la frase para personalizar"></div>
 		<div class="form-group right"><button class="btn btn-primary submit ok-btn">OK</button></div>
-		<div class="custom-phrase text-center"></div>
+		<?php $product_cats = wp_get_post_terms( $product->id, 'product_cat' ); ?>
+		<div class="custom-phrase <?php foreach ($product_cats as $product_cat) { echo " " . $product_cat->slug; } ?> text-center"></div>
 	</div>
 
 	<?php

@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	<p class="text-center kalam product_color"><?php the_field('product_color') ?></p>
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook.

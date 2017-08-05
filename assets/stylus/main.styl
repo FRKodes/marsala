@@ -3,12 +3,15 @@ gris1 = #b2b2b2
 gris2 = #5f5f5f
 gris3 = #d5d5d5
 gris4 = #dddddd
+.woocommerce-error
+	background-color #A1A1A1
+.woocommerce-error
 .back-gray
 	background-color gris2
 	color white
 .nosotros-main-content
-	width 240%
-	margin-left -70%
+	width 120%
+	margin-left -10%
 	padding-top 20px
 	padding-bottom 10px
 	line-height 2em
@@ -57,6 +60,8 @@ input[type="submit"]
 	background-color gris1 !important
 .woocommerce-message
 	background-color gris1 !important
+	padding .5em !important
+	margin-bottom 60px !important
 	.button
 		background-color transparent !important
 th.product-remove
@@ -135,6 +140,8 @@ ul.menu
 	li
 		a
 			color gris4
+			&:focus
+				outline none
 	.sub-menu
 		li a
 			color gris2
@@ -222,7 +229,7 @@ h1.woocommerce-breadcrumb
 	text-align center
 	margin-top 0
 	margin-bottom 0
-	font-size 2em
+	font-size 1.4em
 	font-weight 100
 	text-transform uppercase
 	letter-spacing 1px
@@ -304,13 +311,13 @@ h1.woocommerce-breadcrumb
 			width auto
 	.navbar-collapse
 		background rgba(white, .99)
-		margin-left -10%
+		margin-left -7%
 		padding-bottom 20px
 		padding-top 20px
 		position absolute
 		padding-left 15px
 		padding-right 15px
-		width 110%
+		width 114%
 		border none
 .navbar-nav
 	margin-left 5px
@@ -459,6 +466,17 @@ form
 		p.cel
 		p.office
 			margin-bottom 0
+.added-to-cart-message
+	display flex
+	align-items center
+	p
+		width 60%
+		display inline-block
+		margin 0px
+	a
+		width 40%
+	    display inline-block
+	    position relative
 ul.products
 	li.product
 		img
@@ -467,12 +485,23 @@ ul.products
 		span.price
 			color white
 			margin-bottom 0
-	&.col-xs-6
-		margin-bottom 1.6em
 	h3
 		color white
 		text-transform uppercase
 		margin-bottom 0
+ul.products
+	li.product.col-xs-6
+		margin-bottom 1.6em
+		.title-price-container
+			background none
+			transition all .5s ease
+			margin-top 0
+			h3
+				font-size .8em
+				min-height 40px
+				color black
+			span.price
+				color black
 .title-price-container
 	background rgba(black, .6)
 	height 80px
@@ -483,19 +512,26 @@ ul.products
 	margin-top -80px
 	position relative
 	overflow hidden
+	transition all .5s ease
 	hr
 		width 140px
 		margin 5px auto
 .woocommerce-breadcrumb
 	a
 		display none
+.archive
+	.navbar-default
+		.navbar-brand
+			img
+				margin-top 0
+				margin-left -5px
 /*SINGLE PRODUCT*/
 .single-product
 	.navbar-default
 		.navbar-brand
 			img
 				margin-top 0
-				margin-left 15px
+				margin-left -5px
 	.navbar-header:before
 	.navbar-header:after
 		display none
@@ -507,8 +543,15 @@ ul.products
 	.content-area
 		margin-top -30px
 	div.product
+		margin-top 15px
+		padding-top 0px
 		.price
 			text-align center
+		    border-top 1px solid #f1f1f1
+		    margin-bottom 20px
+		    margin-top 20px
+		    padding-top 10px
+		    font-size 1.2em
 		.images
 			width 88%
 			margin-bottom 0 !important
@@ -567,16 +610,48 @@ ul.products
 				transition opacity .5s ease
 			&.radios
 				margin-bottom 0
+				width 100%
+				.select_gray
+					border 1px solid black
+					border-radius 0px
+					width 99%
 		.custom-phrase
-			font-size 1.6em
+			font-size .7em
 			color #FFD700
-			margin-top 65px
+			margin-top 20px
 			font-weight bold
 			opacity 0
 			transition opacity .5s ease
 			&.grabado
 				color #333
 				text-shadow 0px 1px 0px rgba(255,255,255,.5)
+			&.broquel
+				color #FFF
+			&.plateado
+				color #c0c0c0
+			&.negro
+				color #000
+			&.naranja
+				color orange
+			&.backpack
+				margin-top 26px
+			&.pouch
+				margin-top 45px
+				margin-left 35px
+			&.tarjetero
+				margin-top 60px
+			&.neceseres-mujer
+				margin-top 130px
+			&.porta-pasaportes
+				margin-top 160px
+			&.tags
+				margin-top 155px
+			&.neceseres-hombe
+			&.neceseres-hombre
+				margin-top 35px
+				margin-left 15px
+			&.cosmetiquero-de-viaje
+				margin-top 100px
 		&.active
 			top 16px
 			opacity 1
@@ -645,7 +720,149 @@ footer
 		img
 			width 50px
 			display inline-block
+@media screen and (min-width: 360px)
+	.single-product
+		.customize-it-form
+			.custom-phrase
+				&.backpack
+					margin-top 40px
+				&.tarjetero
+					margin-top 85px
+				&.pouch
+					margin-top 65px
+				&.neceseres-hombe
+				&.neceseres-hombre
+					margin-top 50px
+				&.neceseres-mujer
+					margin-top 155px
+				&.porta-pasaportes
+					margin-top 200px
+				&.tags
+					margin-top 190px
+				&.cosmetiquero-de-viaje
+					margin-top 130px
+@media screen and (min-width: 400px)
+	.single-product
+		.customize-it-form
+			.custom-phrase
+				&.backpack
+					margin-top 50px
+				&.tarjetero
+					margin-top 105px
+				&.cosmetiquero-de-viaje
+					margin-top 150px
+				&.pouch
+					margin-top 80px
+				&.neceseres-hombe
+				&.neceseres-hombre
+					margin-top 75px
+				&.neceseres-mujer
+					margin-top 185px
+				&.porta-pasaportes
+					margin-top 235px
+				&.tags
+					margin-top 225px
+@media screen and (min-width: 430px)
+	.single-product
+		.customize-it-form
+			.custom-phrase
+				&.backpack
+					margin-top 60px
+				&.tarjetero
+					margin-top 125px
+				&.cosmetiquero-de-viaje
+					margin-top 170px
+				&.pouch
+					margin-top 95px
+				&.neceseres-hombe
+				&.neceseres-hombre
+					margin-top 80px
+				&.neceseres-mujer
+					margin-top 205px
+				&.porta-pasaportes
+					margin-top 260px
+				&.tags
+					margin-top 250px
+@media screen and (min-width: 510px)
+	.single-product
+		.customize-it-form
+			.custom-phrase
+				&.backpack
+					margin-top 80px
+				&.tarjetero
+					margin-top 155px
+				&.cosmetiquero-de-viaje
+					margin-top 170px
+				&.pouch
+					margin-top 95px
+				&.neceseres-hombe
+				&.neceseres-hombre
+					margin-top 80px
+				&.neceseres-mujer
+					margin-top 205px
+				&.porta-pasaportes
+					margin-top 260px
+				&.tags
+					margin-top 250px
+@media screen and (min-width: 570px)
+	.single-product
+		.customize-it-form
+			.custom-phrase
+				&.backpack
+					margin-top 110px
+				&.tarjetero
+					margin-top 180px
+				&.cosmetiquero-de-viaje
+					margin-top 250px
+				&.pouch
+					margin-top 130px
+					margin-left 45px
+				&.neceseres-hombe
+				&.neceseres-hombre
+					margin-top 110px
+				&.neceseres-mujer
+					margin-top 300px
+				&.porta-pasaportes
+					margin-top 370px
+				&.tags
+					margin-top 355px
+	.nosotros-main-content
+		.the-content
+			width 570px
+@media screen and (min-width: 660px)
+	.single-product
+		.customize-it-form
+			.custom-phrase
+				&.backpack
+					margin-top 125px
+					margin-left 40px
+				&.tarjetero
+					margin-top 210px
+					margin-left -10px
+				&.cosmetiquero-de-viaje
+					margin-top 305px
+				&.pouch
+					margin-top 170px
+					margin-left 75px
+				&.neceseres-hombe
+				&.neceseres-hombre
+					margin-top 135px
+				&.neceseres-mujer
+					margin-top 355px
+				&.porta-pasaportes
+					margin-top 445px
+				&.tags
+					margin-top 425px
+					margin-left -15px
 @media screen and (min-width: 768px)
+	.added-to-cart-message
+		width 100%
+		p
+			width 83%
+		a
+			width 16%
+	.dropdown.show ul.dropdown-menu
+		overflow hidden
 	.home.page:not(.page-template-template-homepage)
 		.site-header
 			.navbar-brand
@@ -655,6 +872,8 @@ footer
 	.navbar-default
 		.navbar-brand
 			width 200px
+	.navbar-default .navbar-brand img#logo-marsala
+		margin-left 15px
 	.customize-photos-container
 		width 738px
 		margin 0 auto
@@ -756,6 +975,7 @@ footer
 			margin 0 0 0 15px
 	h1.woocommerce-breadcrumb
 		margin-top 60px
+		padding-bottom .9em
 	.main-banners-container
 		height auto
 		margin-bottom 30px
@@ -817,6 +1037,9 @@ footer
 		.site-content
 			width 720px
 			margin 0 auto
+	.nosotros-main-content
+		.the-content
+			width 700px
 	ul.products
 		li.product
 			height 200px
@@ -832,6 +1055,8 @@ footer
 			margin 0 auto
 			width 738px
 		div.product
+			.images .icons-container a
+				margin-bottom 0 !important
 			.price
 				margin-bottom 30px
 			.summary
@@ -846,12 +1071,19 @@ footer
 						span
 							font-size .5em
 							margin-left 10px
+					button.icon-bag
+						display flex
+						align-items center
+						span
+							margin-left 6px
 				.woocommerce-main-image
 					margin-bottom 10px !important
 			.thumbnails
 				a.zoom
 					width 24% !important
 					margin-right 1% !important
+		.product_color
+			margin-top -5px
 		.customize-it-form
 			width 41.5%
 			&.active
@@ -862,6 +1094,25 @@ footer
 					margin-right 10px
 			.custom-phrase
 				margin-top 80px
+				&.backpack
+					margin-top 35px
+					margin-left 5px
+				&.pouch
+					margin-top 65px
+					margin-left 50px
+				&.tarjetero
+					margin-top 90px
+				&.neceseres-mujer
+					margin-top 130px
+				&.porta-pasaportes
+					margin-top 190px
+				&.tags
+					margin-top 190px
+				&.neceseres-hombe
+				&.neceseres-hombre
+					margin-top 45px
+				&.cosmetiquero-de-viaje
+					margin-top 125px
 		ul.products
 			align-items flex-start
 			li.product
@@ -925,6 +1176,11 @@ footer
 		height 670px
 	.nosotros-images-container
 		margin-top 40px
+	.nosotros-main-content
+		width 140%
+		margin-left -20%
+		.the-content
+			width 920px
 	.gallery-banner
 		height 400px
 		h2
@@ -949,6 +1205,25 @@ footer
 		.customize-it-form
 			.custom-phrase
 				margin-top 120px
+				&.backpack
+					margin-top 70px
+					margin-left 10px
+				&.tarjetero
+					margin-top 130px
+					margin-left -10px
+				&.cosmetiquero-de-viaje
+					margin-top 180px
+				&.pouch
+					margin-top 95px
+				&.neceseres-hombe
+				&.neceseres-hombre
+					margin-top 75px
+				&.neceseres-mujer
+					margin-top 220px
+				&.porta-pasaportes
+					margin-top 275px
+				&.tags
+					margin-top 275px
 	.right-sidebar
 		.content-area
 			margin 0 auto !important
@@ -961,6 +1236,9 @@ footer
 	.archive
 		.site-content
 			width 1140px
+	.nosotros-main-content
+		.the-content
+			width 1170px
 	.site-main
 		ul.products
 			li.product
@@ -975,6 +1253,24 @@ footer
 		.customize-it-form
 			.custom-phrase
 				margin-top 160px
+				&.backpack
+					margin-top 100px
+				&.tarjetero
+					margin-top 180px
+				&.cosmetiquero-de-viaje
+					margin-top 240px
+				&.pouch
+					margin-top 135px
+					margin-left 60px
+				&.neceseres-hombe
+				&.neceseres-hombre
+					margin-top 110px
+				&.neceseres-mujer
+					margin-top 280px
+				&.porta-pasaportes
+					margin-top 350px
+				&.tags
+					margin-top 350px
 	.single-product
 		.site-content
 			width 1170px
@@ -986,3 +1282,11 @@ footer
 	.right-sidebar
 		.content-area
 			width 1140px !important
+@media screen and (min-width: 1500px)
+	.nosotros-main-content
+		width 240%
+		margin-left -70%
+@media screen and (min-width: 2000px)
+	.nosotros-main-content
+		width 300%
+		margin-left -100%
