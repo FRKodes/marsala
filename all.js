@@ -53,6 +53,7 @@ jQuery('#masthead .footer-cart-contents').addClass('icon-bag');
 jQuery('.icon-personalizar').on('click', function (){
   jQuery('.customize-it-form').toggleClass('active');
   jQuery('.customize-it-form .form-group').removeClass('opacity_0');
+  jQuery('#phrase').focus();
 });
 
 jQuery('.ok-btn').on('click', function (){

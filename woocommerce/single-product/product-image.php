@@ -54,7 +54,7 @@ global $post, $product;
 		<div class="form-group left"><input type="text" name="phrase" id="phrase" class="form-control" placeholder="Ingresa la frase para personalizar"></div>
 		<div class="form-group right"><button class="btn btn-primary submit ok-btn">OK</button></div>
 		<?php $product_cats = wp_get_post_terms( $product->id, 'product_cat' ); ?>
-		<div class="custom-phrase <?php foreach ($product_cats as $product_cat) { echo " " . $product_cat->slug; } ?> text-center"></div>
+		<div class="custom-phrase <?php foreach ($product_cats as $product_cat) { echo " " . $product_cat->slug; } ?> text-center" id="prod-<?php echo $product->id; ?>"></div>
 	</div>
 
 	<?php
