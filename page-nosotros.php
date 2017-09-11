@@ -15,7 +15,7 @@ get_header(); ?>
 					<div class="nosotros-banner-container"></div>
 				</div>
 
-				<div class="container-fluid back-gray nosotros-main-content walter-font">
+				<div class="container-fluid back-gray nosotros-main-content">
 					<?php get_template_part( 'content', 'page-only-content' );?>
 				</div>
 

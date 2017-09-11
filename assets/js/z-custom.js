@@ -105,7 +105,6 @@ if (jQuery('p.stock:contains("Hay existencias")').length > 0) {
 
 jQuery( window ).scroll(function() {
   var vertical_position = jQuery('body').scrollTop();
-  console.log(vertical_position);
   if (vertical_position >=1) {
     jQuery('.navbar').addClass('transparent');
   }else{
@@ -117,4 +116,25 @@ jQuery( window ).scroll(function() {
   } else{
     jQuery('.go-up-btn').addClass('hidden');
   };
+
 });
+
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true
+});
+
+jQuery('a.zoom').on('click', function (event){
+  event.preventDefault();
+  var image_url = jQuery(this).attr("href");
+  jQuery('.woocommerce-main-image').attr('href', image_url);
+  jQuery('.woocommerce-main-image img').attr('src', image_url).attr('srcset', image_url);
+  jQuery('.customize-it-form').removeClass('active');
+});
+
+jQuery('a.icon-personalizar').on('click', function(){
+  var image_url = jQuery('.thumbnails .first').attr('href');
+  jQuery('.woocommerce-main-image').attr('href', image_url);
+  jQuery('.woocommerce-main-image img').attr('src', image_url).attr('srcset', image_url);
+});
+

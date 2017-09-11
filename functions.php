@@ -7,7 +7,7 @@ function my_theme_enqueue_styles() {
 	wp_enqueue_style( 'child-style',
 		get_stylesheet_directory_uri() . '/marsala-style.css',
 		array( $parent_style ),
-		'1.7'
+		'1.9'
 	);
 	// wp_get_theme()->get('Version')
 }

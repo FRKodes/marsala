@@ -31,8 +31,8 @@ global $post, $product;
 			<input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>">
 			<button type="submit" class="icon-bag"><span class="hidden-xs"> COMPRAR</span></button>
 		</form>
-
-		<a href="#" class="icon-personalizar"><span class="hidden-xs">PERSONALIZAR</span></a>
+		<?php $product_cats = wp_get_post_terms( $product->id, 'product_cat' ); ?>
+		<a href="#" class="icon-personalizar<?php foreach ($product_cats as $product_cat) { echo " " . $product_cat->slug; }?>"><span class="hidden-xs">PERSONALIZAR</span></a>
 	</div>
 	
 	<div class="customize-it-form">
@@ -43,18 +43,11 @@ global $post, $product;
 				<option value="Plateado">Plateado</option>
 				<option value="Naranja">Naranja</option>
 				<option value="Negro">Negro</option>
-				<option value="Holograma">Holograma</option>
 			</select>
-			<!-- <input type="radio" name="color_tecnica" value="Dorado" checked> <span>Dorado </span>
-			<input type="radio" name="color_tecnica" value="Plateado"> <span>Plateado </span>
-			<input type="radio" name="color_tecnica" value="Naranja"> <span>Naranja </span>
-			<input type="radio" name="color_tecnica" value="Negro"> <span>Negro </span>
-			<input type="radio" name="color_tecnica" value="Holograma"> <span>Holograma </span> -->
 		</div>
-		<div class="form-group left"><input type="text" name="phrase" id="phrase" class="form-control" placeholder="Ingresa la frase para personalizar"></div>
+		<div class="form-group left"><input type="text" name="phrase" maxlength="4" id="phrase" class="form-control" placeholder="Ingresa la frase para personalizar"></div>
 		<div class="form-group right"><button class="btn btn-primary submit ok-btn">OK</button></div>
-		<?php $product_cats = wp_get_post_terms( $product->id, 'product_cat' ); ?>
-		<div class="custom-phrase <?php foreach ($product_cats as $product_cat) { echo " " . $product_cat->slug; } ?> text-center" id="prod-<?php echo $product->id; ?>"></div>
+		<div class="custom-phrase<?php foreach ($product_cats as $product_cat) { echo " " . $product_cat->slug; } ?> text-center" id="prod-<?php echo $product->id; ?>"></div>
 	</div>
 
 	<?php
@@ -69,7 +62,7 @@ global $post, $product;
 			echo apply_filters(
 				'woocommerce_single_product_image_html',
 				sprintf(
-					'<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto%s">%s</a>',
+					'<a href="%s" itemprop="image" class="woocommerce-main-image zoom" data-lightbox="product-main-image" title="%s" data-rel="prettyPhoto%s">%s</a>',
 					esc_url( $props['url'] ),
 					esc_attr( $props['caption'] ),
 					$gallery,
