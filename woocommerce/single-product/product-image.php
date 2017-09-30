@@ -43,6 +43,7 @@ global $post, $product;
 				<option value="Plateado">Plateado</option>
 				<option value="Naranja">Naranja</option>
 				<option value="Negro">Negro</option>
+				<option value="Holograma">Holograma</option>
 			</select>
 		</div>
 		<div class="form-group left"><input type="text" name="phrase" maxlength="4" id="phrase" class="form-control" placeholder="Ingresa la frase para personalizar"></div>
