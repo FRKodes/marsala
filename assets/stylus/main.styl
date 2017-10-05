@@ -527,6 +527,27 @@ ul.products
 			img
 				margin-top 0
 				margin-left -5px
+
+@-webkit-keyframes Logo {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@-moz-keyframes Logo {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@-o-keyframes Logo {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@keyframes Logo {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
 /*SINGLE PRODUCT*/
 .single-product
 	.navbar-default
@@ -622,7 +643,7 @@ ul.products
 		.custom-phrase
 			font-size .7em
 			// color #C3922E
-			color #c08b2b
+			color #cc9832
 			margin-top 20px
 			font-weight bold
 			opacity 0
@@ -636,11 +657,18 @@ ul.products
 			&.plateado
 				color #c0c0c0
 			&.negro
-				color #000
+				color #000000
 			&.naranja
 				color orange
 			&.holograma
-				color #dcd9db
+				background linear-gradient(270deg, gris1, #ea7373, #eccb14, #60df50, #49b7d2, #eb6dcf, #ec14da)
+				background-size 300% 300%
+				-webkit-background-clip text
+				color transparent
+				-webkit-animation Logo 10s ease infinite
+				-moz-animation Logo 10s ease infinite
+				-o-animation Logo 10s ease infinite
+				animation Logo 10s ease infinite
 			&.backpack
 				margin-top 34%
 				margin-left 6%
