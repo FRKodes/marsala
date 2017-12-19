@@ -28,20 +28,6 @@ get_header(); ?>
 				<?php get_template_part( 'content', 'page-only-content' );
 
 			endwhile; // End of the loop. ?>
-			
-
-			<!-- <div class="ig-container container">
-				<div class="row">
-					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-1.png" alt=""></div>
-					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-2.png" alt=""></div>
-					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-3.png" alt=""></div>
-					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-4.png" alt=""></div>
-					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-5.png" alt=""></div>
-					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-6.png" alt=""></div>
-					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-7.png" alt=""></div>
-					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/marsala-ig-1.png" alt=""></div>
-				</div>
-			</div> -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

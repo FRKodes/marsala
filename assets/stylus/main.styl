@@ -768,6 +768,24 @@ ul.products
 			.title-price-container
 				hr
 					width 90px
+#contactForm
+	position relative
+	overflow hidden
+.form-group.error
+	.form-control
+		border 1px solid red
+		transition border .5s ease
+.sent_mail_alert
+	background-color black
+	color white
+	position absolute
+	width 100%
+	height auto
+	text-align center
+	bottom 100px
+	padding 40px 30px
+	right 0
+	display none
 #secondary
 	display none
 .entry-header
@@ -1362,6 +1380,8 @@ footer
 	.login
 		width 640px
 		margin 0 auto
+	.sent_mail_alert
+		padding 40px 100px
 	footer
 		&.site-footer
 			.container
@@ -1561,6 +1581,8 @@ footer
 				height 270px
 				.title-price-container
 					position relative
+	.sent_mail_alert
+		padding 40px 150px
 	.right-sidebar
 		.content-area
 			width 1140px !important

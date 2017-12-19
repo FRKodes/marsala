@@ -20,6 +20,15 @@
 	.woocommerce-info, .woocommerce-noreviews, p.no-comments{ background-color: #b2b2b2}
 	.cart-collaterals .cart_totals{float: none; margin: 0 auto}
 </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-84802922-11"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-84802922-11');
+</script>
 </head>
 
 <body <?php body_class(); ?>>
