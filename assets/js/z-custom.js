@@ -180,38 +180,38 @@ jQuery('a.icon-personalizar').on('click', function(){
 
 
 
-	/*validator*/
-	jQuery(function(){
+/*validator*/
+jQuery(function(){
 
-	  var formSettings = {
-		singleError : function($field, rules){ 
-		  $field.closest('.form-group').removeClass('valid').addClass('error');
-		  jQuery('.text-danger').fadeIn();
-		},
-		singleSuccess : function($field, rules){ 
-		  $field.closest('.form-group').removeClass('error').addClass('valid');
-		  jQuery('.text-danger').fadeOut();
-		},
-		overallSuccess : function(){
-		  var form      = jQuery('#contactForm'),
-			nombre      = form.find( "input[name='nombre']").val(),
-			email       = form.find( "input[name='email']").val(),
-			telefono    = form.find( "input[name='telefono']").val(),
-			mensaje     = form.find( "textarea[name='mensaje']").val(),
-			action      = form.attr( "action"),
-			url         = action;
+  var formSettings = {
+	singleError : function($field, rules){ 
+	  $field.closest('.form-group').removeClass('valid').addClass('error');
+	  // jQuery('.text-danger').fadeIn();
+	},
+	singleSuccess : function($field, rules){ 
+	  $field.closest('.form-group').removeClass('error').addClass('valid');
+	  // jQuery('.text-danger').fadeOut();
+	},
+	overallSuccess : function(){
+	  var form      = jQuery('#contactForm'),
+		nombre      = form.find( "input[name='nombre']").val(),
+		email       = form.find( "input[name='email']").val(),
+		telefono    = form.find( "input[name='telefono']").val(),
+		mensaje     = form.find( "textarea[name='mensaje']").val(),
+		action      = form.attr( "action"),
+		url         = action;
 
-		  var posting = $.post(
-			url, { nombre: nombre, telefono: telefono, email: email, mensaje: mensaje }
-		  );
-		  posting.done(function( data ){
-			console.log('email sent! \n' + data );
-			jQuery('#contactForm')[0].reset();
-			jQuery('.sent_mail_alert').fadeIn().delay(3000).fadeOut();
-		  });
-		},
-		overallError : function($form, fields){ /*Do nothing, just show the error fields*/ },
-		  autoDetect : true, debug : true
-		};
-	  var $validate = jQuery('#contactForm').validate(formSettings).data('validate');
-	});
+	  var posting = jQuery.post(
+		url, { nombre: nombre, telefono: telefono, email: email, mensaje: mensaje }
+	  );
+	  posting.done(function( data ){
+		console.log('email sent! \n' + data );
+		jQuery('#contactForm')[0].reset();
+		jQuery('.sent_mail_alert').fadeIn().delay(3000).fadeOut();
+	  });
+	},
+	overallError : function($form, fields){ /*Do nothing, just show the error fields*/ },
+	  autoDetect : true, debug : true
+	};
+  var $validate = jQuery('#contactForm').validate(formSettings).data('validate');
+});

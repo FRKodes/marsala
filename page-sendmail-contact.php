@@ -19,7 +19,7 @@ if (isset($_POST['email'])) {
     $mail->addBCC("frkalderon@gmail.com");
     $mail->isHTML(true);
     $mail->Subject = "Contacto Web MARSALA";
-    $mail->Body = "<p>". $nombre ." escribió: </p>";
+    $mail->Body = "<p>". $nombre ." escribi&oacute;: </p>";
     $mail->Body.= "<p>Nombre<b>: </b>". $nombre ."</p>";
     $mail->Body.= "<p>Email<b>: </b>". $email ."</p>";
     $mail->Body.= "<p>Telefono<b>: </b>". $telefono ."</p>";

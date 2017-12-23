@@ -24,8 +24,9 @@ get_header(); ?>
 			<div class="container">
 				<div class="row">
 					<div class="nosotros-images-container col-sm-8 col-sm-offset-2">
-						<div class="image-container"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/nosotros-01.jpg" alt=""></div>
-						<div class="image-container"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/nosotros-02.jpg" alt=""></div>
+						<p>&nbsp;</p>
+						<!-- <div class="image-container"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/nosotros-01.jpg" alt=""></div>
+						<div class="image-container"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/nosotros-02.jpg" alt=""></div> -->
 					</div>
 				</div>
 			</div>

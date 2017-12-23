@@ -15,7 +15,7 @@ get_header(); ?>
 			
 			<div class="row">
 				<div class="container">
-					<form class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" action="/sendmail-contact" method="POST" id="contactForm">
+					<form class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" action="/sendmail-contact" method="post" id="contactForm">
 						<div class="form-group"><input type="text" name="nombre" class="form-control" placeholder="*Nombre completo" data-validate="required"></div>
 						<div class="form-group"><input type="text" name="email" class="form-control" placeholder="*Email" data-validate="required|email"></div>
 						<div class="form-group"><input type="text" name="telefono" class="form-control" placeholder="Teléfono"></div>
