@@ -179,6 +179,15 @@ jQuery('a.icon-personalizar').on('click', function(){
 });
 
 
+jQuery('.banners_promo_container').slick({
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
 
 /*validator*/
 jQuery(function(){

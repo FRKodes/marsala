@@ -12,26 +12,45 @@
  */
 
 get_header(); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="row">
 				<div class="main-banners-container">
-					<div class="item"></div>
+					<?php $args = array('post_type'=> 'main_image_home', 'posts_per_page' => 1);
+					$query = new WP_Query( $args );
+					if ( $query->have_posts() ) : ?>
+					    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+							<div class="item" style="background-image: url(<?php the_post_thumbnail_url(); ?>)"></div>
+					    <?php endwhile; wp_reset_postdata(); ?>
+					<?php endif; ?>
 				</div>
 			</div>
 		
 			<div class="container">
 				<div class="row">
-					<div class="banner-promo-home">
-						<h2 class="text-center">MARSALA SALE</h2>
-						<h3 class="text-center gris second-line">¡HASTA EL 50% DE DESCUENTO!</h3>
+					<div class="banners_promo_container">
+						<?php $args = array('post_type'=> 'banner_promo');
+						$query = new WP_Query( $args );
+						if ( $query->have_posts() ) : ?>
+						    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+								<div class="banner-promo-home">
+									<a href="<?php the_field('link_destino') ?>" title="<?php the_title() ?>"><?php the_post_thumbnail(); ?></a>
+								</div>
+						    <?php endwhile; wp_reset_postdata(); ?>
+						<?php endif; ?>
 					</div>
-					<div class="banner-hashtag">
-						<span class="hash">#MMARSALA</span>
-						<span class="world">EN TODO EL MUNDO</span>
+
+						<?php $args = array('post_type'=> 'banner_hashtag_home', 'posts_per_page' => 1);
+						$query = new WP_Query( $args );
+						if ( $query->have_posts() ) : ?>
+						    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+								<div class="banner-hashtag" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+									<span class="hash"><?php the_field('hashtag') ?></span>
+									<span class="world"><?php the_field('texto_banner') ?></span>
+								</div>
+						    <?php endwhile; wp_reset_postdata(); ?>
+						<?php endif; ?>
 					</div>
-				</div>
 			</div>
 
 		</main><!-- #main -->

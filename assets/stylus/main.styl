@@ -339,18 +339,39 @@ h1.woocommerce-breadcrumb
 	height 300px
 	width 100%
 	.item
-		background transparent url(./assets/images/01-Slide-A.jpg) no-repeat center center
+		background-position center center
+		background-repeat no-repeat
 		background-size cover
 		height 100%
 		width 100%
+.banners_promo_container
+	width 100%
+	height auto
+	display block
+.slick-arrow
+	background none !important
+	border none !important
+	display none !important
+.slick-dots
+	padding 0
+	text-align center
+	li
+		display inline-block
+		margin 10px 5px
+		width 12px
+		height 12px
+		border-radius 50%
+		overflow hidden
+		background gray !important
+		button
+			background none !important
+			color transparent !important
+			border none !important
+		&.slick-active
+			background black !important
 .banner-promo-home
-	background transparent url(./assets/images/02-Diagonales.svg) no-repeat left bottom
-	padding 40px 0
-	h2
-		color black
-	h3
-		border none
-		background-size cover
+	margin 40px 0
+	display block
 .banner-hashtag
 	margin-top 30px
 	background transparent url(./assets/images/03-marsala-hashtag.jpg) no-repeat center center
@@ -412,7 +433,9 @@ h1.woocommerce-breadcrumb
 		img
 			height auto
 .gallery-banner
-	background transparent url(./assets/images/banner-gallery-marsala.jpg) no-repeat center center
+	background-color transparent
+	background-position center center
+	background-repeat no-repeat
 	background-size cover
 	height 200px
 	text-align center
@@ -1195,24 +1218,6 @@ footer
 		margin-bottom 30px
 		.item
 			height 500px
-	.banner-promo-home
-		height 130px
-		position relative
-		background-size 260px
-		h2
-			position absolute
-			left 40px
-			top 0
-			font-size 3em
-		h3
-			position absolute
-			right 40px
-			top 0
-			font-size 3em
-			&.second-line
-				width 300px
-				height auto
-				padding-top 0
 	.banner-hashtag
 		height 250px
 		line-height 3.8em
@@ -1398,19 +1403,6 @@ footer
 		margin-bottom 50px
 		.item
 			height 650px
-	.banner-promo-home
-		height 160px
-		background-size 320px
-		h2
-			font-size 4em
-			top -8px
-		h3
-			right 0px
-			font-size 3.5em
-			&.second-line
-				width 450px
-				height auto
-				padding-top 0
 	.banner-hashtag
 		height 340px
 		line-height 4em

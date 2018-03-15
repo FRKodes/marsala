@@ -125,8 +125,88 @@ function create_topics_hierarchical_taxonomy() {
 
 add_filter('wc_add_to_cart_message', 'handler_function_name', 10, 2);
 function handler_function_name($message, $product_id) {
-    return '<p>Este producto fue añadido a tu carrito </p><a href="http://marsala.dev/carrito/" class="button wc-forward">Ver carrito</a>';
+    return '<p>Este producto fue añadido a tu carrito </p><a href="https://marsalamarsala.com/carrito/" class="button wc-forward">Ver carrito</a>';
 }
 
+
+add_action( 'init', 'create_main_image_home_post_type' );
+function create_main_image_home_post_type() {
+	register_post_type( 'main_image_home',
+	array(
+		'labels' => array(
+			'name' => __( 'Imagen Principal Home' ),
+			'singular_name' => __( 'Imagen principal' ),
+			'add_new' => __( 'Agregar otro Imagen Principal Home' )
+		),
+		'public' => true,
+		'has_archive' => false,
+		'supports'=> array('title', 'thumbnail', 'page-attributes'),
+	)
+	);
+}
+
+add_action( 'init', 'create_banner_hashtag_home_post_type' );
+function create_banner_hashtag_home_post_type() {
+	register_post_type( 'banner_hashtag_home',
+	array(
+		'labels' => array(
+			'name' => __( 'Banners Hashtag Home' ),
+			'singular_name' => __( 'Banner Hashtag' ),
+			'add_new' => __( 'Agregar otro Banner Hashtag' )
+		),
+		'public' => true,
+		'has_archive' => false,
+		'supports'=> array('title', 'thumbnail', 'page-attributes'),
+	)
+	);
+}
+
+add_action( 'init', 'create_banner_promo_post_type' );
+function create_banner_promo_post_type() {
+	register_post_type( 'banner_promo',
+	array(
+		'labels' => array(
+			'name' => __( 'Banners Promo' ),
+			'singular_name' => __( 'Banner Promo' ),
+			'add_new' => __( 'Agregar otro Banner Promo' )
+		),
+		'public' => true,
+		'has_archive' => false,
+		'supports'=> array('title', 'thumbnail', 'page-attributes'),
+	)
+	);
+}
+
+add_action( 'init', 'create_imagen_galeria_post_type' );
+function create_imagen_galeria_post_type() {
+	register_post_type( 'imagen_galeria',
+	array(
+		'labels' => array(
+			'name' => __( 'Imágenes Galería' ),
+			'singular_name' => __( 'Imagen Galería' ),
+			'add_new' => __( 'Agregar otra Imagen Galería' )
+		),
+		'public' => true,
+		'has_archive' => false,
+		'supports'=> array('title', 'thumbnail', 'page-attributes'),
+	)
+	);
+}
+
+add_action( 'init', 'create_banner_galeria_post_type' );
+function create_banner_galeria_post_type() {
+	register_post_type( 'banner_galeria',
+	array(
+		'labels' => array(
+			'name' => __( 'Banner Galería' ),
+			'singular_name' => __( 'Banner Galería' ),
+			'add_new' => __( 'Agregar Banner Galería' )
+		),
+		'public' => true,
+		'has_archive' => false,
+		'supports'=> array('title', 'thumbnail', 'page-attributes'),
+	)
+	);
+}
 
 ?>
