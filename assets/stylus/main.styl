@@ -3,6 +3,13 @@ gris1 = #b2b2b2
 gris2 = #5f5f5f
 gris3 = #d5d5d5
 gris4 = #dddddd
+
+.mayus
+	text-transform uppercase
+.font-100
+	font-weight 100
+.font-400
+	font-weight 400
 .woocommerce-error
 	background-color #A1A1A1
 .woocommerce-error
@@ -811,6 +818,43 @@ ul.products
 	display none
 #secondary
 	display none
+#secondary-blog
+	#secondary
+		display block
+.blog-item
+	border-bottom 1px solid rgba(gris0, .2)
+	margin-bottom 30px
+	&:last-of-type
+		border none
+	.blog-image-header
+		background-color gray
+		width 100%
+		height 100px
+		background-position center center
+		background-size cover
+		background-repeat no-repeat
+	h2
+		font-size 1.4em
+		padding 5px 0
+		margin-bottom 0
+	p
+		font-weight 400
+.single-blog
+	.blog-item
+		.blog-image-header
+			margin-bottom 20px !important
+			background-position center center
+			background-size cover
+			background-repeat no-repeat
+	.post-categories
+		padding 0
+		margin 40px 0 0
+		li
+			display inline-block
+			&:after
+				content ', '
+			&:last-of-type:after
+				content ''
 .entry-header
 	h1
 		display none
@@ -1387,6 +1431,21 @@ footer
 		margin 0 auto
 	.sent_mail_alert
 		padding 40px 100px
+	#blog
+		width 65% !important
+	#secondary-blog
+		width 30%
+		float right
+		#secondary
+			width 100%
+	.blog-item
+		margin-bottom 50px
+		.blog-image-header
+			height 200px
+		h2
+			font-size 1.4em
+			padding 5px 0
+			margin-bottom 0
 	footer
 		&.site-footer
 			.container
@@ -1499,6 +1558,14 @@ footer
 	.home
 		#primary
 			width 100% !important
+	#blog
+		margin-right 4.347826087% !important
+		margin-left 0
+		float left !important
+	#secondary-blog
+		width 30%
+		#secondary
+			width 100%
 @media screen and (min-width: 1200px)
 	.archive
 		.site-content
