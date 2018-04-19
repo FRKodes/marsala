@@ -632,6 +632,7 @@ jQuery("#go-to-top").click(function() {
 	jQuery('html, body').animate({
 		scrollTop: jQuery("#masthead").offset().top
 	}, 500);
+  console.log('clicked!');
 });
 
 jQuery('input[type=radio][name=color_tecnica]').change(function() {
@@ -667,7 +668,7 @@ if (jQuery('p.stock:contains("Hay existencias")').length > 0) {
 }
 
 jQuery( window ).scroll(function() {
-  var vertical_position = jQuery('body').scrollTop();
+  var vertical_position = jQuery('html').scrollTop();
   if (vertical_position >=1) {
 	jQuery('.navbar').addClass('transparent');
   }else{

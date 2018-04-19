@@ -839,6 +839,27 @@ ul.products
 		margin-bottom 0
 	p
 		font-weight 400
+	.nav-posts-links
+		display flex
+		justify-content space-between
+		margin-top 60px
+		span
+			width 45%
+		span:first-of-type:before
+			content '<< '
+		span:last-of-type
+			text-align right
+			&:after
+				content ' >>'
+.pagination.blog
+	padding 0em 0
+	border none
+	border-width 0
+	text-align center
+	width 100%
+	.page-numbers
+		display inline-block
+		margin 0 5px
 .single-blog
 	.blog-item
 		.blog-image-header
@@ -1562,8 +1583,9 @@ footer
 		margin-right 4.347826087% !important
 		margin-left 0
 		float left !important
+		width 75% !important
 	#secondary-blog
-		width 30%
+		width 20%
 		#secondary
 			width 100%
 @media screen and (min-width: 1200px)

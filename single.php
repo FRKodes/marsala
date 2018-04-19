@@ -13,7 +13,14 @@ get_header(); ?>
 					<?php the_content() ?>
 					<?php the_category() ?>
 					<?php the_tags() ?>
+
+					<div class="nav-posts-links">
+						<?php previous_post_link('<span>%link</span>'); ?>
+						<?php next_post_link('<span>%link</span>'); ?>
+					</div>
+
 				</div>
+
 			<?php endwhile; ?>
 			<?php endif; ?>	
 		</main><!-- #main -->
