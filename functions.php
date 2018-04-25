@@ -209,4 +209,20 @@ function create_banner_galeria_post_type() {
 	);
 }
 
+add_action( 'init', 'create_punto_de_venta_post_type' );
+function create_punto_de_venta_post_type() {
+	register_post_type( 'punto_de_venta',
+	array(
+		'labels' => array(
+			'name' => __( 'Puntos de venta' ),
+			'singular_name' => __( 'Punto de venta' ),
+			'add_new' => __( 'Agregar Punto de Venta' )
+		),
+		'public' => true,
+		'has_archive' => false,
+		'supports'=> array('title', 'editor', 'page-attributes'),
+	)
+	);
+}
+
 ?>

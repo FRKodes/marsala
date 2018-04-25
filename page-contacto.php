@@ -32,60 +32,24 @@ get_header(); ?>
 			</div>
 
 			<div class="row">
-				<div class="container">
-					<div class="shop-item col-xs-12 col-sm-4 col-sm-3">
-						<div class="shop-title fjala">Jota Mas E Barcelona</div>
-						<div class="shop-info">
-							<div class="line-1">
-								<p class="address"><span class="icon-"></span> Av. Américas esq. Valparaíso</p>
-								<p class="cp">Plaza Punto Sao Paulo L-J8</p>
-							</div>
-							<div class="line-2">
-								<!-- <p class="cel"><span class="icon-cel"></span>&nbsp;<br></p> -->
-								<p class="office">Guadalajara Jalisco. MX <br></p>
-							</div>
-						</div>
-					</div>
-					<div class="shop-item col-xs-12 col-sm-4 col-sm-3">
-						<div class="shop-title fjala">Maleri Gallery</div>
-						<div class="shop-info">
-							<div class="line-1">
-								<p class="address"><span class="icon-"></span>Pablo Neruda #2584-2 Col. Providencia</p>
-								<p class="cp">Guadalajara Jalisco. MX</p>
-							</div>
-							<div class="line-2">
-								<!-- <p class="cel"><span class="icon-cel"></span>&nbsp;</p> -->
-								<p class="office">(33) 3817 7745</p>
+
+				<?php $args = array('post_type'=> 'punto_de_venta');
+				$query = new WP_Query( $args );
+				if ( $query->have_posts() ) : ?>
+				    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+						<div class="shop-item col-xs-12 col-sm-4 col-sm-3">
+							<div class="shop-title fjala"><?php the_title() ?></div>
+							<div class="shop-info">
+								<div class="line-1">
+									<p class="address">
+										<?php the_content() ?>
+									</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="shop-item col-xs-12 col-sm-4 col-sm-3">
-						<div class="shop-title fjala">Casa-R</div>
-						<div class="shop-info">
-							<div class="line-1">
-								<p class="address"><span class="icon-"></span>Mesones #83</p>
-								<p class="cp">San Miguel de Allende Guanajuato. MX</p>
-							</div>
-							<div class="line-2">
-								<p class="cel"><span class="icon-cel"></span><a href="http://casa-r.com" target="_blank">http://casa-r.com</a> <br></p>
-								<p class="office">&nbsp;</p>
-							</div>
-						</div>
-					</div>
-					<div class="shop-item col-xs-12 col-sm-4 col-sm-3">
-						<div class="shop-title fjala">The Fancy Archive</div>
-						<div class="shop-info">
-							<div class="line-1">
-								<p class="address"><span class="icon-"></span>Paseo de los Tamarindos #99</p>
-								<p class="cp">México City. MX</p>
-							</div>
-							<div class="line-2">
-								<!-- <p class="cel"><span class="icon-cel"></span> Cel. 33 1020 3040 <br></p> -->
-								<p class="office"><a href="http://thefancyarchive.com/mathieu-matachaga-creative-director" target="_blank">thefancyarchive.com</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
+				    <?php endwhile; wp_reset_postdata(); ?>
+				<?php endif; ?>					
+
 			</div>
 
 		</main><!-- #main -->

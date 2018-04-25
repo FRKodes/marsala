@@ -535,14 +535,34 @@ m),c=this,q=["checkGroupRequired","checkGroupMin","checkGroupMax"];c.$form=f;c.v
 function(a){a=d("[data-validate]",a===l?c.$form:a);h.autoDetect&&(a=d("input[required]").add(a));return a};c.checkRequired=function(a){return 0<a.val().length?!0:!1};c.checkRequiredCheckbox=function(a){return a.is(":checked")};c.checkGroupRequired=function(a){return a.filter(":checked").length?!0:!1};c.checkGroupMin=function(a,b){return a.filter(":checked").length>=b};c.checkGroupMax=function(a,b){return a.filter(":checked").length<=b};c.checkCustomRegExp=function(a,b,c){if(""===a.val())return!0;
 b=RegExp(b,c);return a.val().match(b)?!0:!1};c.checkRegExp=function(a,b){return a.val().match(h.regExp[b])?!0:!1};c.checkMaxLength=function(a,b){return""===a.val()?!0:a.val().length<=b};c.checkMinLength=function(a,b){return""===a.val()?!0:a.val().length>=b};c.checkMax=function(a,b){return""===a.val()?!0:parseFloat(a.val())<=parseFloat(b)};c.checkMin=function(a,b){return""===a.val()?!0:parseFloat(a.val())>=parseFloat(b)}}})(window,jQuery);
 
+function initMap(pointers) {
+	
+	var centerLatLng  = {lat: 20.537337, lng: -100.818879};
+	var locations = new Array();
+	locations = pointers;
+	var infowindow = new google.maps.InfoWindow();
+	var marker, i, lat, lng;
 
+	locations = JSON.parse(locations);
 
-function initMap() {
-  var centerLatLng  = {lat: 20.537337, lng: -100.818879};
-  var myLatLng      = {lat: 20.702031, lng: -103.376435};
-  var myLatLng2     = {lat: 20.697803, lng: -103.379589};
-  var myLatLng3     = {lat: 20.915627, lng: -100.744105};
-  var myLatLng4     = {lat: 19.387532, lng: -99.251947};
+	for (i = 0; i < locations.length; i++) {
+		lat = locations[i].coordenadas.split(',')[0];
+		lng = locations[i].coordenadas.split(',')[1];
+
+		// console.log('Lat: ' + lat + 'Lng: ' + lng);
+
+		marker = new google.maps.Marker({
+			position: new google.maps.LatLng(lat, lng),
+			map: map
+		});
+
+		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			return function() {
+			infowindow.setContent(locations[i].title);
+			infowindow.open(map, marker);
+			}
+		})(marker, i));
+	}
 
   var map = new google.maps.Map(document.getElementById('map'), {
 	zoom: 8,
@@ -550,39 +570,7 @@ function initMap() {
 	scrollwheel: false
   });
 
-  var marker = new google.maps.Marker({
-	position: myLatLng,
-	map: map,
-	title: 'MARSALA en Jota Mas E Barcelona'
-  });
-
-  var marker2 = new google.maps.Marker({
-	position: myLatLng2,
-	map: map,
-	title: 'MARSALA en Maleri Gallery'
-  });
-
-  var marker3 = new google.maps.Marker({
-	position: myLatLng3,
-	map: map,
-	title: 'MARSALA en Casa-R'
-  });
-
-  var marker4 = new google.maps.Marker({
-	position: myLatLng4,
-	map: map,
-	title: 'MARSALA en The Fancy Archive'
-  });
-
-
 }
-
-// jQuery('.grid').masonry({
-//   itemSelector: '.grid-item',
-//   columnWidth: 160
-// });
-
-
 
 jQuery('.primary-navigation').addClass('navbar-collapse collapse');
 jQuery('#menu-main-menu').addClass('nav navbar-nav');
@@ -593,10 +581,6 @@ jQuery('li.cat-element').on('click', function (e){
   e.stopPropagation();
   jQuery('#' + jQuery(this).attr('id') + ' .dropdown-menu').toggleClass('hidden');
 });
-
-
-// jQuery('li.dropdown').firstChild().addClass('dropdown-toggle');
-// jQuery('.#menu-main-menu').addClass('dropdown');
 
 jQuery('li.dropdown-prods').on('click', function (){
   jQuery('#' + jQuery(this).attr('id')).first('dropdown-menu').toggleClass('show');
@@ -747,4 +731,11 @@ jQuery(function(){
 	  autoDetect : true, debug : true
 	};
   var $validate = jQuery('#contactForm').validate(formSettings).data('validate');
+});
+
+jQuery.ajax({
+	method: "GET",
+	url: "/pines-puntos-de-venta/"
+}).done(function( pointers ) {
+	initMap(pointers);
 });
