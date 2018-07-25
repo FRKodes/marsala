@@ -545,30 +545,35 @@ function initMap(pointers) {
 
 	locations = JSON.parse(locations);
 
-	for (i = 0; i < locations.length; i++) {
-		lat = locations[i].coordenadas.split(',')[0];
-		lng = locations[i].coordenadas.split(',')[1];
+	// console.log(locations);
 
-		// console.log('Lat: ' + lat + 'Lng: ' + lng);
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 8,
+		center: centerLatLng,
+		scrollwheel: false
+	});
+
+	for (i = 0; i < locations.length; i++) {
+		lat = parseFloat(locations[i].coordenadas.split(',')[0]);
+		lng = parseFloat(locations[i].coordenadas.split(',')[1]);
+
+		// console.log('Lat: ' + lat + ' - Lng: ' + lng);
 
 		marker = new google.maps.Marker({
 			position: new google.maps.LatLng(lat, lng),
 			map: map
 		});
 
-		google.maps.event.addListener(marker, 'click', (function(marker, i) {
-			return function() {
-			infowindow.setContent(locations[i].title);
-			infowindow.open(map, marker);
-			}
-		})(marker, i));
+		// console.log(marker);
+
+		// google.maps.event.addListener(marker, 'click', (function(marker, i) {
+		// 	return function() {
+		// 	infowindow.setContent(locations[i].name);
+		// 	infowindow.open(map, marker);
+		// 	}
+		// })(marker, i));
 	}
 
-  var map = new google.maps.Map(document.getElementById('map'), {
-	zoom: 8,
-	center: centerLatLng,
-	scrollwheel: false
-  });
 
 }
 

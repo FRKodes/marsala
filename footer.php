@@ -28,7 +28,8 @@
 							<li><a target="_blank" href="https://www.instagram.com/marsalamarsala/" class="icon-instagram"></a></li>
 						</ul>
 						<div class="footer-logo"><img src="<?php echo get_stylesheet_directory_uri()."/assets/images/mmarsala.svg"; ?>" alt="logo footer mmarsala"></div>
-						<p class="text-center">Copyright &copy; 2017 MARSALA. <br>All right reserved.</p>
+						<p class="text-center">Copyright &copy; <?php echo date('Y') ?> MARSALA. <br>All right reserved.</p>
+						<p class="text-center">Developed by <a target="_blank" title="Go to the develoeprs website" href="http://www.blueterrier.mx">Blue Terrier Studio</a></p>
 					</div>
 				</div>
 			</div>
