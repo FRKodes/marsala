@@ -56,6 +56,7 @@ function initMap(pointers) {
 
 jQuery('.primary-navigation').addClass('navbar-collapse collapse');
 jQuery('#menu-main-menu').addClass('nav navbar-nav');
+jQuery('#menu-main-menu-eng').addClass('nav navbar-nav');
 jQuery('ul.sub-menu').addClass('dropdown-menu');
 jQuery('.nav li:has(ul)').addClass('dropdown');
 jQuery('.cat-element .sub-menu').addClass('hidden');
