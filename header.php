@@ -46,10 +46,16 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand header-logo" href="/">
+			<?php
+			if (strpos($_SERVER['REQUEST_URI'], '/en') !== false) { ?>
+				<a class="navbar-brand header-logo" href="/en"> <?php
+			} else { ?>
+				<a class="navbar-brand header-logo" href="/"> <?php
+			} ?>
 			  	<img class="hidden-sm hidden-md hidden-lg" src="<?php echo get_stylesheet_directory_uri()."/assets/images/mmarsala-black.svg"; ?>" alt="mini logo header mmarsala">
 			  	<img class="hidden-xs" id="logo-marsala" src="<?php echo get_stylesheet_directory_uri()."/assets/images/logo-marsala-normal.svg"; ?>" alt="logo mmarsala">
 			  </a>
+
 			  <span class="hidden-sm hidden-md hidden-lg"><?php storefront_handheld_footer_bar_cart_link(); ?></span>
 			</div>
 

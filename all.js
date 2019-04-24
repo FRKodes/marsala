@@ -577,6 +577,23 @@ function initMap(pointers) {
 
 }
 
+/*
+ *
+ * class="icon-favoritos"
+ */
+var url_language = window.location.href;
+
+if (url_language.indexOf('/en/') !== -1) {
+	jQuery('a[class="icon-favoritos"] span').html('ADD TO FAVS');
+	jQuery('button[class="icon-bag"] span').html('SHOP');
+	jQuery('a.icon-personalizar span').html('CUSTOMIZE');
+
+	jQuery('.woocommerce-message.added-to-cart-message').html('Cart updated');
+	
+}
+
+
+
 jQuery('.primary-navigation').addClass('navbar-collapse collapse');
 jQuery('#menu-main-menu').addClass('nav navbar-nav');
 jQuery('#menu-main-menu-eng').addClass('nav navbar-nav');
