@@ -53,6 +53,13 @@ function initMap(pointers) {
 
 
 }
+ 
+
+
+jQuery('#menu-item-921-es a').attr('href', jQuery('#menu-item-921-es a').attr('href') + '/?wmc-currency=MXN');
+jQuery('#menu-item-921-en a').attr('href', jQuery('#menu-item-921-en a').attr('href') + '/?wmc-currency=USD');
+jQuery('#menu-item-1036-es a').attr('href', jQuery('#menu-item-1036-es a').attr('href') + '/?wmc-currency=MXN');
+jQuery('#menu-item-1036-en a').attr('href', jQuery('#menu-item-1036-en a').attr('href') + '/?wmc-currency=USD');
 
 /*
  *
