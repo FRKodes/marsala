@@ -42,7 +42,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/y-lightbox.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/slick.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/z-custom.js?v=1.0"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/z-custom.js?v=1.1"></script>
 <?php if (strpos($_SERVER['REQUEST_URI'], 'contact') !== false) { ?>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQhg9wdqnWZSlPRMZFV7-op85YynGz4PU"></script>
 <?php } ?>
